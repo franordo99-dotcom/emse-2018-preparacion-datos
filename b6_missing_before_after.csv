@@ -1,0 +1,17 @@
+﻿partition,stage,column_group,n_rows,n_features,cell_n,missing_n,missing_pct_cells
+train,before,all_features,44440,148,6577120,636829,9.682490208480308
+train,before,q4,44440,1,44440,16168,36.38163816381638
+train,before,q5,44440,1,44440,16168,36.38163816381638
+train,before,categorical_features,44440,146,6488240,604493,9.316748455667485
+train,after,all_features,44440,149,6621560,0,0.0
+train,after,q4,44440,1,44440,0,0.0
+train,after,q5,44440,1,44440,0,0.0
+train,after,categorical_features,44440,146,6488240,0,0.0
+test,before,all_features,11111,148,1644428,160161,9.739617666446934
+test,before,q4,11111,1,11111,4041,36.369363693636934
+test,before,q5,11111,1,11111,4041,36.369363693636934
+test,before,categorical_features,11111,146,1622206,152079,9.374826624978578
+test,after,all_features,11111,149,1655539,0,0.0
+test,after,q4,11111,1,11111,0,0.0
+test,after,q5,11111,1,11111,0,0.0
+test,after,categorical_features,11111,146,1622206,0,0.0

@@ -1,0 +1,4 @@
+﻿column,code,label,n,missing_n,observed_n,missing_pct
+q2,1.0,Masculino,26330,9794,16536,37.19711355867831
+q2,2.0,Femenino,28730,9924,18806,34.54229028889662
+q2,,Dato perdido,491,491,0,100.0

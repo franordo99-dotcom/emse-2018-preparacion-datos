@@ -1,0 +1,7 @@
+﻿column,code,label,n,missing_n,observed_n,missing_pct
+q3,1.0,8vo grado nivel Primario/Polimodal  o 1er año nivel Secundario,8307,3944,4363,47.478030576622125
+q3,2.0,9no grado nivel Primario/Polimodal o 2do año nivel Secundario,11606,4709,6897,40.57384111666379
+q3,3.0,1er año/10mo grado nivel Polimodal o 3er año nivel Secundario,12173,4350,7823,35.73482296886552
+q3,4.0,2do año/11vo grado nivel Polimodal o 4to año nivel Secundario,12973,4175,8798,32.182224620365375
+q3,5.0,3er año/12vo grado nivel Polimodal o 5to año nivel Secundario,9502,2566,6936,27.00484108608714
+q3,,Dato perdido,990,465,525,46.96969696969697

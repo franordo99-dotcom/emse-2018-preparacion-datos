@@ -1,0 +1,4 @@
+﻿partition,n,pct_universe,feature_n,random_state,test_size_parameter,shuffle,stratify,split_unit,test_frozen
+global,55551,100.0,148,42,0.2,True,target_pa_oms5,student_individual,True
+train,44440,79.99855988191031,148,42,0.2,True,target_pa_oms5,student_individual,True
+test,11111,20.001440118089683,148,42,0.2,True,target_pa_oms5,student_individual,True

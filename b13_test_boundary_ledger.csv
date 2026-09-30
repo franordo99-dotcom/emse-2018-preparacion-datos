@@ -1,0 +1,10 @@
+block,operation,fit_partition,test_action,test_used_for_fit,test_resampled,status
+B5,"Split individual aleatorio estratificado","NONE; frontera creada una vez","Crear 11111 casos y congelar membresía",False,False,TEST_CREATED_AND_FROZEN
+B6,"Mediana q4/q5 e indicador más regla sin_dato",TRAIN_ONLY,"Aplicar medianas train y reglas fijas",False,False,COMPLIANT
+B7,"StandardScaler q4/q5",TRAIN_ONLY,"scaler.transform con parámetros train",False,False,COMPLIANT
+B8,"Mappings ordinales y vocabularios one-hot patch",TRAIN_ONLY,"Transform con mappings/vocabularios train; unseen sin refit",False,False,COMPLIANT
+B9,"IMC por fórmula fija y StandardScaler IMC",TRAIN_ONLY,"Fórmula fija y scaler.transform con parámetros train",False,False,COMPLIANT
+B10,"SMOTE demonstration-only",TRAIN_ONLY,"Sin fit_resample; copia byte/data idéntica",False,False,DEMONSTRATION_ONLY_NOT_DOWNSTREAM
+B11,"Mutual Information y selección Top30",TRAIN_ONLY,"Aplicar las 30 columnas rankeadas en train",False,False,COMPLIANT
+B12,"StandardScaler PCA y PCA full/k90",TRAIN_ONLY,"scaler.transform y pca.transform; primeras 13 PCs",False,False,COMPLIANT
+SUMMARY,"Verificación B5-B12",TRAIN_ONLY_AFTER_B5,"Sólo transformaciones o preservación después de la creación",False,False,TEST_USED_FOR_FIT_ANYWHERE_AFTER_B5_FALSE

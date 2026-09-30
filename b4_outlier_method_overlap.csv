@@ -1,0 +1,4 @@
+﻿variable,observed_n,iqr_n,z3_n,domain_flag_n,iqr_only_n,z3_only_n,iqr_and_z3_n,domain_only_n,iqr_and_domain_n,z3_and_domain_n,all_three_n
+q4,35342,341,165,15,176,0,165,0,15,15,15
+q5,35342,1144,426,168,718,0,426,1,167,164,164
+imc_diag,35342,1318,411,70,907,0,411,0,70,70,70

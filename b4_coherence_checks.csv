@@ -1,0 +1,11 @@
+﻿check,affected_n,classification_if_positive,evidence
+q4_non_numeric,0,ERROR_DE_REPRESENTACION_DEMOSTRADO,Sin casos detectados.
+q5_non_numeric,0,ERROR_DE_REPRESENTACION_DEMOSTRADO,Sin casos detectados.
+q4_infinite,0,ERROR_DE_REPRESENTACION_DEMOSTRADO,Sin casos detectados.
+q5_infinite,0,ERROR_DE_REPRESENTACION_DEMOSTRADO,Sin casos detectados.
+q4_nonpositive,0,ERROR_DE_REPRESENTACION_DEMOSTRADO,Sin casos detectados.
+q5_nonpositive,0,ERROR_DE_REPRESENTACION_DEMOSTRADO,Sin casos detectados.
+imc_infinite,0,ERROR_DE_REPRESENTACION_DEMOSTRADO,Sin casos detectados.
+unexpected_imc_nan,0,ERROR_DE_CALCULO_DEMOSTRADO,Sin casos detectados.
+imc_formula_inconsistent,0,ERROR_DE_CALCULO_DEMOSTRADO,Sin casos detectados.
+duplicate_record,0,INCONSISTENCIA_DE_IDENTIFICADOR,Sin casos detectados.

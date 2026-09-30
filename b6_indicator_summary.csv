@@ -1,0 +1,5 @@
+﻿partition,indicator,value,n,pct_partition
+train,q4q5_faltaba,0,28272,63.61836183618362
+train,q4q5_faltaba,1,16168,36.38163816381638
+test,q4q5_faltaba,0,7070,63.630636306363066
+test,q4q5_faltaba,1,4041,36.369363693636934

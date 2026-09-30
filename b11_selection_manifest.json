@@ -1,0 +1,115 @@
+{
+  "block": "B11",
+  "source_block": "B9_PATCH",
+  "source_manifest": "b9_feature_engineering_manifest.json",
+  "source_hashes": {
+    "b9_X_train.pkl": "d963a26062232794abe54a1f94d0dcdbdc4db9bd481dadb855d91beb8e795972",
+    "b9_X_test.pkl": "4eee083d1d9bd6e36280afacbc3493a3b69b70d031564dd5c8a3785cdfa2dfed",
+    "b9_y_train.pkl": "d56b76137b4f79f62fcdff6a86435bd1c1e4a989f4535a54e93e008d504ee9ae",
+    "b9_y_test.pkl": "e145dfdc279855844a6ab9108cce2ae97e339e2ee4e2ead16b13576eccf1d889"
+  },
+  "SEMANTIC_PATCH_APPLIED": true,
+  "method": "mutual_info_classif",
+  "sklearn_version": "1.7.2",
+  "random_state": 42,
+  "n_neighbors": 3,
+  "discrete_features_policy": "B9_FEATURE_INVENTORY_TYPE_AWARE_MASK",
+  "FIT_PARTITION": "TRAIN_ONLY",
+  "TEST_USED_FOR_FIT": false,
+  "selection_rule": "TOP_K_PREDECIDED",
+  "top_k": 30,
+  "tie_break": "MI_DESC_FEATURE_NAME_ASC",
+  "input_feature_n": 404,
+  "output_feature_n": 30,
+  "train_n": 44440,
+  "test_n": 11111,
+  "selected_features": [
+    "imc",
+    "q50",
+    "q61",
+    "q2__1",
+    "q2__2",
+    "q4",
+    "q17",
+    "q46",
+    "q19__1",
+    "qn19__2",
+    "qn19__sin_dato",
+    "q18__1",
+    "qn18__sin_dato",
+    "qn17__1",
+    "qn17__2",
+    "qn61__1",
+    "q51",
+    "qn61__2",
+    "qn46__1",
+    "qn46__2",
+    "q71",
+    "q47__2",
+    "qn47__1",
+    "q19__8",
+    "qn45__sin_dato",
+    "qn50__2",
+    "q54",
+    "qn47__sin_dato",
+    "q62",
+    "qnbcanyg__1"
+  ],
+  "DOWNSTREAM_TRAIN_SOURCE": "B9_ORIGINAL_TRAIN",
+  "DOWNSTREAM_TRAIN_N": 44440,
+  "DOWNSTREAM_SMOTE_SOURCE_ALLOWED": false,
+  "B10_STATUS": "SMOTE_DEMONSTRATION_ONLY",
+  "TEST_FROZEN_AFTER_B5": true,
+  "INTERPRETATION_CONTRACT": "Mutual information ranks statistical association with the target in the training sample; it does not establish causality or independent effects.",
+  "INTERPRETATION_LABEL": "association_not_causation",
+  "operation_flags": {
+    "new_split": false,
+    "imputation": false,
+    "scaling": false,
+    "reencoding": false,
+    "feature_engineering": false,
+    "smote": false,
+    "pca": false,
+    "model_training": false,
+    "test_used_for_mi": false,
+    "y_test_used_for_mi": false
+  },
+  "output_files": {
+    "b11_mutual_information_ranking.csv": {
+      "sha256": "adbc0faea0ec46292accd0685db1a0f436a8dea0254eb2e6bd5e22cf031b9d93",
+      "bytes": 101212
+    },
+    "b11_selected_features.csv": {
+      "sha256": "0f4dbf3e7869143360c0ec9c22effd70e8ed3ef0f7d9b74d0293bc3b63938f8e",
+      "bytes": 2665
+    },
+    "b11_source_feature_mi_summary.csv": {
+      "sha256": "4eec6dde0059b31232b0148a61334747dbc3cc42642d69a4c052946c5d6e2dc8",
+      "bytes": 9358
+    },
+    "b11_selection_summary.csv": {
+      "sha256": "06173d8736dd14319c314b7762b86c9e86024a395a3f2684f8caafbaf00e53cf",
+      "bytes": 467
+    },
+    "b11_feature_inventory.csv": {
+      "sha256": "e62aadd7e4d5026c917e29decaf220d42fdf7939b374e912154cc0eb22b75db7",
+      "bytes": 61601
+    },
+    "b11_X_train.pkl": {
+      "sha256": "e52cf6e843c4aa6ddb2c13b07b9318d2487a777566e2ac26447335b2b8ad315d",
+      "bytes": 2667843
+    },
+    "b11_X_test.pkl": {
+      "sha256": "438d3bae975f9dd1425c4cc1d4a54b329731babeaa7c6220425161bcfb29d5b5",
+      "bytes": 668103
+    },
+    "b11_y_train.pkl": {
+      "sha256": "d56b76137b4f79f62fcdff6a86435bd1c1e4a989f4535a54e93e008d504ee9ae",
+      "bytes": 756128
+    },
+    "b11_y_test.pkl": {
+      "sha256": "e145dfdc279855844a6ab9108cce2ae97e339e2ee4e2ead16b13576eccf1d889",
+      "bytes": 189535
+    }
+  }
+}

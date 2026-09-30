@@ -1,0 +1,77 @@
+{
+  "stage": "DELIVERY_D1",
+  "artifact": "MI_TOP10_BAR",
+  "source_block": "B11",
+  "source_file": "b11_mutual_information_ranking.csv",
+  "source_sha256": "adbc0faea0ec46292accd0685db1a0f436a8dea0254eb2e6bd5e22cf031b9d93",
+  "ranking_recomputed": false,
+  "dataset_modified": false,
+  "fit_executed": false,
+  "model_trained": false,
+  "PIPELINE_MODIFIED": false,
+  "max_mi": 0.00977376175440958,
+  "top10_features": [
+    "imc",
+    "q50",
+    "q61",
+    "q2__1",
+    "q2__2",
+    "q4",
+    "q17",
+    "q46",
+    "q19__1",
+    "qn19__2"
+  ],
+  "INTERPRETATION": "ASSOCIATION_NOT_CAUSATION",
+  "SIGNAL_STRENGTH": "WEAK_INDIVIDUAL_ASSOCIATIONS",
+  "Q50_STATUS": "SAME_DOMAIN_REVIEW_NOT_HARD_LEAKAGE",
+  "q50_note": "q50: dominio vecino del target; no interviene en la definición de q49.",
+  "chart": {
+    "type": "horizontal_bar",
+    "dimensions_px": [3200, 1800],
+    "aspect_ratio": "16:9",
+    "x_axis": "Mutual Information (MI)",
+    "x_axis_min": 0.0,
+    "x_axis_max": 0.01125,
+    "scale": "linear",
+    "rank_1_at_top": true,
+    "palette": "single_sober_blue",
+    "visual_qa_passed": true
+  },
+  "artifacts": [
+    {
+      "path": "d1_mi_top10_labels.csv",
+      "sha256": "ce3dfe7817513e80e4de549c9cd675a7602703bbdfe33473f90404b083cccf32"
+    },
+    {
+      "path": "d1_mi_top10_bar.png",
+      "sha256": "a5eeeae22407502ef204f95f89301aaadb268c7c3ef29bc171884430f22fb290"
+    },
+    {
+      "path": "d1_mi_top10_bar.svg",
+      "sha256": "45031ff8cde1eb807017d46ea16a772f35432ce01cb99fcb69d00862dc28f5b8"
+    }
+  ],
+  "checks": {
+    "01_ranking_leido_desde_B11": true,
+    "02_MI_no_recalculada": true,
+    "03_top10_coincide_exactamente_con_B11": true,
+    "04_rank_1_imc": true,
+    "05_rank_2_q50": true,
+    "06_rank_10_qn19_2": true,
+    "07_MI_maxima_aproximadamente_0_0097737618": true,
+    "08_eje_comienza_en_cero": true,
+    "09_sin_escala_logaritmica": true,
+    "10_asociacion_no_causalidad_visible": true,
+    "11_senal_debil_visible": true,
+    "12_q50_caveat_documentado": true,
+    "13_labels_trazables": true,
+    "14_no_se_inventaron_labels": true,
+    "15_PNG_generado": true,
+    "16_SVG_generado": true,
+    "17_ranking_original_no_modificado": true,
+    "18_datasets_no_modificados": true,
+    "19_no_fit": true,
+    "20_no_modelo": true
+  }
+}

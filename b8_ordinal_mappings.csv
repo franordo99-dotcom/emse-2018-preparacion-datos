@@ -1,0 +1,380 @@
+﻿column,category,response_label,category_kind,semantic_order_position,encoded_value,fit_partition,sentinel_is_not_part_of_order
+q1,1,11 años o menos,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q1,2,12 años,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q1,3,13 años,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q1,4,14 años,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q1,5,15 años,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q1,6,16 años,substantive_ordered_category,5,5,TRAIN_ONLY_SEMANTIC_ORDER,False
+q1,7,17 años,substantive_ordered_category,6,6,TRAIN_ONLY_SEMANTIC_ORDER,False
+q1,8,18 años o más,substantive_ordered_category,7,7,TRAIN_ONLY_SEMANTIC_ORDER,False
+q1,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q1,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q3,1,8vo grado nivel Primario/Polimodal  o 1er año nivel Secundario,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q3,2,9no grado nivel Primario/Polimodal o 2do año nivel Secundario,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q3,3,1er año/10mo grado nivel Polimodal o 3er año nivel Secundario,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q3,4,2do año/11vo grado nivel Polimodal o 4to año nivel Secundario,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q3,5,3er año/12vo grado nivel Polimodal o 5to año nivel Secundario,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q3,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q3,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q6,1,Nunca,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q6,2,Rara vez,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q6,3,Algunas veces,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q6,4,Casi siempre,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q6,5,Siempre,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q6,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q6,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q10,1,0 días,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q10,2,1 día,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q10,3,2 días,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q10,4,3 días,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q10,5,4 días,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q10,6,5 días,substantive_ordered_category,5,5,TRAIN_ONLY_SEMANTIC_ORDER,False
+q10,7,6 días,substantive_ordered_category,6,6,TRAIN_ONLY_SEMANTIC_ORDER,False
+q10,8,7 días,substantive_ordered_category,7,7,TRAIN_ONLY_SEMANTIC_ORDER,False
+q10,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q10,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q15,1,Ninguna,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q15,2,1 vez,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q15,3,2 o 3 veces,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q15,4,4 o 5 veces,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q15,5,6 o 7 veces,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q15,6,8 o 9 veces,substantive_ordered_category,5,5,TRAIN_ONLY_SEMANTIC_ORDER,False
+q15,7,10 u 11 veces,substantive_ordered_category,6,6,TRAIN_ONLY_SEMANTIC_ORDER,False
+q15,8,12 o más veces,substantive_ordered_category,7,7,TRAIN_ONLY_SEMANTIC_ORDER,False
+q15,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q15,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q16,1,Ninguna,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q16,2,1 vez,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q16,3,2 o 3 veces,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q16,4,4 o 5 veces,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q16,5,6 o 7 veces,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q16,6,8 o 9 veces,substantive_ordered_category,5,5,TRAIN_ONLY_SEMANTIC_ORDER,False
+q16,7,10 u 11 veces,substantive_ordered_category,6,6,TRAIN_ONLY_SEMANTIC_ORDER,False
+q16,8,12 o más veces,substantive_ordered_category,7,7,TRAIN_ONLY_SEMANTIC_ORDER,False
+q16,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q16,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q17,1,Ninguna,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q17,2,1 vez,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q17,3,2 o 3 veces,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q17,4,4 o 5 veces,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q17,5,6 o 7 veces,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q17,6,8 o 9 veces,substantive_ordered_category,5,5,TRAIN_ONLY_SEMANTIC_ORDER,False
+q17,7,10 u 11 veces,substantive_ordered_category,6,6,TRAIN_ONLY_SEMANTIC_ORDER,False
+q17,8,12 o más veces,substantive_ordered_category,7,7,TRAIN_ONLY_SEMANTIC_ORDER,False
+q17,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q17,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q22,1,Nunca,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q22,2,Rara vez,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q22,3,Algunas veces,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q22,4,Casi siempre,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q22,5,Siempre,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q22,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q22,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q23,1,Nunca,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q23,2,Rara vez,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q23,3,Algunas veces,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q23,4,Casi siempre,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q23,5,Siempre,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q23,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q23,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q26,1,0 veces,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q26,2,1 vez,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q26,3,2 o 3 veces,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q26,4,4 o 5 veces,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q26,5,6 o más veces,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q26,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q26,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q27,1,0,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q27,2,1,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q27,3,2,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q27,4,3 o más,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q27,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q27,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q29,1,0 días,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q29,2,1 o 2 días,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q29,3,3 a 5 días,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q29,4,6 a 9 días,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q29,5,10 a 19 días,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q29,6,20 a 29 días,substantive_ordered_category,5,5,TRAIN_ONLY_SEMANTIC_ORDER,False
+q29,7,Los 30 días,substantive_ordered_category,6,6,TRAIN_ONLY_SEMANTIC_ORDER,False
+q29,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q29,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q30,1,0 días,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q30,2,1 o 2 días,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q30,3,3 a 5 días,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q30,4,6 a 9 días,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q30,5,10 a 19 días,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q30,6,20 a 29 días,substantive_ordered_category,5,5,TRAIN_ONLY_SEMANTIC_ORDER,False
+q30,7,Los 30 días,substantive_ordered_category,6,6,TRAIN_ONLY_SEMANTIC_ORDER,False
+q30,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q30,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q32,1,0 días,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q32,2,1 o 2 días,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q32,3,3 o 4 días,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q32,4,5 o 6 días,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q32,5,Los 7 días,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q32,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q32,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q35,1,0 días,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q35,2,1 o 2 días,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q35,3,3 a 5 días,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q35,4,6 a 9 días,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q35,5,10 a 19 días,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q35,6,20 a 29 días,substantive_ordered_category,5,5,TRAIN_ONLY_SEMANTIC_ORDER,False
+q35,7,Los 30 días,substantive_ordered_category,6,6,TRAIN_ONLY_SEMANTIC_ORDER,False
+q35,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q35,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q36,1,No tomé alcohol durante los últimos 30 días,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q36,2,Menos de un trago,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q36,3,1 trago,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q36,4,2 tragos,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q36,5,3 tragos,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q36,6,4 tragos,substantive_ordered_category,5,5,TRAIN_ONLY_SEMANTIC_ORDER,False
+q36,7,5 tragos o más,substantive_ordered_category,6,6,TRAIN_ONLY_SEMANTIC_ORDER,False
+q36,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q36,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q38,1,0 veces,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q38,2,1 o 2 veces,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q38,3,3 a 9 veces,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q38,4,10 o más veces,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q38,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q38,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q39,1,0 veces,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q39,2,1 o 2 veces,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q39,3,3 a 9 veces,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q39,4,10 o más veces,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q39,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q39,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q41,1,0 veces,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q41,2,1 o 2 veces,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q41,3,3 a 9 veces,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q41,4,10 a 19 veces,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q41,5,20 veces o más,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q41,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q41,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q42,1,0 veces,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q42,2,1 o 2 veces,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q42,3,3 a 9 veces,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q42,4,10 a 19 veces,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q42,5,20 veces o más,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q42,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q42,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q43,1,0 veces,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q43,2,1 o 2 veces,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q43,3,3 a 9 veces,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q43,4,10 a 19 veces,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q43,5,20 veces o más,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q43,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q43,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q46,1,Nunca tuve relaciones sexuales,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q46,2,1 persona,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q46,3,2 personas,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q46,4,3 personas,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q46,5,4 personas,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q46,6,5 personas,substantive_ordered_category,5,5,TRAIN_ONLY_SEMANTIC_ORDER,False
+q46,7,6 o más personas,substantive_ordered_category,6,6,TRAIN_ONLY_SEMANTIC_ORDER,False
+q46,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q46,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q50,1,0 días,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q50,2,1 día,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q50,3,2 días,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q50,4,3 días,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q50,5,4 días,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q50,6,5 días,substantive_ordered_category,5,5,TRAIN_ONLY_SEMANTIC_ORDER,False
+q50,7,6 días,substantive_ordered_category,6,6,TRAIN_ONLY_SEMANTIC_ORDER,False
+q50,8,7 días,substantive_ordered_category,7,7,TRAIN_ONLY_SEMANTIC_ORDER,False
+q50,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q50,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q51,1,0 días,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q51,2,1 día,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q51,3,2 días,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q51,4,3 días,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q51,5,4 días,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q51,6,5 días o más,substantive_ordered_category,5,5,TRAIN_ONLY_SEMANTIC_ORDER,False
+q51,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q51,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q52,1,Menos de 1 hora al día,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q52,2,1 a 2 horas al día,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q52,3,3 a 4 horas al día,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q52,4,5 a 6 horas al día,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q52,5,7 a 8 horas al día,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q52,6,Más de 8 horas por día,substantive_ordered_category,5,5,TRAIN_ONLY_SEMANTIC_ORDER,False
+q52,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q52,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q53,1,0 días,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q53,2,1 o 2 días,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q53,3,3 a 5 días,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q53,4,6 a 9 días,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q53,5,10 días o más,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q53,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q53,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q54,1,Nunca,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q54,2,Rara vez,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q54,3,Algunas veces,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q54,4,Casi siempre,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q54,5,Siempre,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q54,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q54,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q55,1,Nunca,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q55,2,Rara vez,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q55,3,Algunas veces,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q55,4,Casi siempre,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q55,5,Siempre,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q55,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q55,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q56,1,Nunca,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q56,2,Rara vez,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q56,3,Algunas veces,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q56,4,Casi siempre,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q56,5,Siempre,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q56,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q56,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q57,1,Nunca,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q57,2,Rara vez,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q57,3,Algunas veces,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q57,4,Casi siempre,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q57,5,Siempre,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q57,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q57,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q58,1,Nunca,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q58,2,Rara vez,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q58,3,Algunas veces,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q58,4,Casi siempre,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q58,5,Siempre,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q58,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q58,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q61,1,No comí frutas durante los últimos 7 días,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q61,2,1 a 3 veces durante los últimos 7 días,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q61,3,4 a 6 veces durante los últimos 7 días,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q61,4,1 vez al día,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q61,5,2 veces al día,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q61,6,3 veces al día,substantive_ordered_category,5,5,TRAIN_ONLY_SEMANTIC_ORDER,False
+q61,7,4 o más veces al día,substantive_ordered_category,6,6,TRAIN_ONLY_SEMANTIC_ORDER,False
+q61,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q61,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q62,1,No comí verduras ni hortalizas durante los últimos 7 días,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q62,2,1 a 3 veces durante los últimos 7 días,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q62,3,4 a 6 veces durante los últimos 7 días,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q62,4,1 vez al día,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q62,5,2 veces al día,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q62,6,3 veces al día,substantive_ordered_category,5,5,TRAIN_ONLY_SEMANTIC_ORDER,False
+q62,7,4 o más veces al día,substantive_ordered_category,6,6,TRAIN_ONLY_SEMANTIC_ORDER,False
+q62,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q62,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q63,1,No tomé gaseosas en los últimos 7 días,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q63,2,1 a 3 veces durante los últimos 7 días,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q63,3,4 a 6 veces durante los últimos 7 días,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q63,4,1 vez al día,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q63,5,2 veces al día,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q63,6,3 veces al día,substantive_ordered_category,5,5,TRAIN_ONLY_SEMANTIC_ORDER,False
+q63,7,4 o más veces al día,substantive_ordered_category,6,6,TRAIN_ONLY_SEMANTIC_ORDER,False
+q63,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q63,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q64,1,No comí comida salada o snacks en los últimos 7 días,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q64,2,1 a 3 veces durante los últimos 7 días,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q64,3,4 a 6 veces durante los últimos 7 días,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q64,4,1 vez al día,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q64,5,2 veces al día,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q64,6,3 veces al día,substantive_ordered_category,5,5,TRAIN_ONLY_SEMANTIC_ORDER,False
+q64,7,4 o más veces al día,substantive_ordered_category,6,6,TRAIN_ONLY_SEMANTIC_ORDER,False
+q64,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q64,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q65,1,No comí comida alta en grasa en los últimos 7 días,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q65,2,1 a 3 veces durante los últimos 7 días,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q65,3,4 a 6 veces durante los últimos 7 días,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q65,4,1 vez al día,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q65,5,2 veces al día,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q65,6,3 veces al día,substantive_ordered_category,5,5,TRAIN_ONLY_SEMANTIC_ORDER,False
+q65,7,4 o más veces al día,substantive_ordered_category,6,6,TRAIN_ONLY_SEMANTIC_ORDER,False
+q65,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q65,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q76,1,Definitivamente no,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q76,2,Probablemente no,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q76,3,Probablemente sí,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q76,4,Definitivamente sí,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q76,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q76,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q77,1,Nunca,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q77,2,Rara vez,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q77,3,Algunas veces,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q77,4,Casi todos los días,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q77,5,Todos los días,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q77,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q77,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q78,1,0 veces,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q78,2,1 o 2 veces,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q78,3,3 a 9 veces,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q78,4,10 a 19 veces,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q78,5,20 veces o más,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q78,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q78,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q80,1,Nunca,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q80,2,Rara vez,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q80,3,Algunas veces,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q80,4,Casi siempre,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q80,5,Siempre,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q80,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q80,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q81,1,Nunca,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q81,2,Rara vez,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q81,3,Algunas veces,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q81,4,Casi siempre,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q81,5,Siempre,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q81,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q81,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q59,1,Primaria incompleta,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q59,2,Primaria completa,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q59,3,Secundario incompleto,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q59,4,Secundario completo,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q59,5,Terciario/Universitario incompleto,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q59,6,Terciario/Universitario completo,substantive_ordered_category,5,5,TRAIN_ONLY_SEMANTIC_ORDER,False
+q59,7,No sé,semantic_escape_sentinel,,-3,SEMANTIC_FIXED_RULE,True
+q59,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q59,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q60,1,Primaria incompleta,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q60,2,Primaria completa,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q60,3,Secundario incompleto,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q60,4,Secundario completo,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q60,5,Terciario/Universitario incompleto,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q60,6,Terciario/Universitario completo,substantive_ordered_category,5,5,TRAIN_ONLY_SEMANTIC_ORDER,False
+q60,7,No sé,semantic_escape_sentinel,,-3,SEMANTIC_FIXED_RULE,True
+q60,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q60,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q69,1,No viajé en un auto u otro vehículo u otro vehículo a motor en los últimos 30 días,semantic_escape_sentinel,,-3,SEMANTIC_FIXED_RULE,True
+q69,2,Rara vez,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q69,3,Algunas veces,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q69,4,La mayoría del tiempo,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q69,5,Siempre,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q69,6,No viajé en un auto u otro vehículo u otro vehículo a motor en los últimos 30 días,semantic_escape_sentinel,,-3,SEMANTIC_FIXED_RULE,True
+q69,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q69,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q70,1,No viajé en un auto o vehículo manejado por otra persona en los últimos 30 días,semantic_escape_sentinel,,-3,SEMANTIC_FIXED_RULE,True
+q70,2,0 veces,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q70,3,1 vez,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q70,4,2 o 3 veces,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q70,5,4 o 5 veces,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q70,6,6 o más veces,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q70,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q70,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q71,1,No maneje una bicicleta en los últimos 30 días,semantic_escape_sentinel,,-3,SEMANTIC_FIXED_RULE,True
+q71,2,Nunca,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q71,3,Rara vez,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q71,4,Algunas veces,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q71,5,La mayoría del tiempo,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q71,6,Siempre,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q71,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q71,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q72,1,No viaje en una moto en los últimos 30 días,semantic_escape_sentinel,,-3,SEMANTIC_FIXED_RULE,True
+q72,2,Nunca,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q72,3,Rara vez,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q72,4,Algunas veces,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q72,5,La mayoría del tiempo,substantive_ordered_category,3,3,TRAIN_ONLY_SEMANTIC_ORDER,False
+q72,6,Siempre,substantive_ordered_category,4,4,TRAIN_ONLY_SEMANTIC_ORDER,False
+q72,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q72,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True
+q79,1,0 veces,substantive_ordered_category,0,0,TRAIN_ONLY_SEMANTIC_ORDER,False
+q79,2,1 vez,substantive_ordered_category,1,1,TRAIN_ONLY_SEMANTIC_ORDER,False
+q79,3,2 o más veces,substantive_ordered_category,2,2,TRAIN_ONLY_SEMANTIC_ORDER,False
+q79,4,No lo sé,semantic_escape_sentinel,,-3,SEMANTIC_FIXED_RULE,True
+q79,sin_dato,sin_dato (categoría fija B6),missing_category_sentinel,,-1,FIXED_RULE,True
+q79,__UNSEEN_TEST__,Categoría test no observada en train,unknown_category_sentinel,,-2,FIXED_RULE,True

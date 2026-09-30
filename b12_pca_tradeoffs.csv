@@ -1,0 +1,10 @@
+﻿type,order,description
+VENTAJA,1,Reduce dimensionalidad.
+VENTAJA,2,Elimina correlación lineal entre componentes.
+VENTAJA,3,Concentra varianza en menos ejes.
+VENTAJA,4,Puede facilitar visualización y síntesis.
+DESVENTAJA,1,Pierde interpretación directa de las variables originales.
+DESVENTAJA,2,Es un método lineal.
+DESVENTAJA,3,La varianza explicada no equivale a relevancia para el target.
+DESVENTAJA,4,Sobre one-hot y ordinales la geometría PCA es una aproximación.
+DESVENTAJA,5,La selección previa B11 hace que la entrada esté informada por el target.

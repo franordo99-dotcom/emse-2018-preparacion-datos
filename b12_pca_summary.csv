@@ -1,0 +1,2 @@
+﻿input_feature_n,train_n,test_n,pca_scaler,pca_scaler_fit_partition,full_components_n,k80,k90,k95,official_variance_threshold,official_components_n,variance_at_k90,reduction_n,reduction_pct,selected_input_continuous_n,selected_input_ordinal_n,selected_input_onehot_n,selected_input_indicator_n,test_used_for_fit,pca_input_target_informed
+30,44440,11111,StandardScaler,train,30,10,13,16,0.9,13,0.907731940481431,17,56.6666666666667,2,8,20,0,False,True

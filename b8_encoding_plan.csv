@@ -1,0 +1,150 @@
+﻿column,input_statistical_type,action,output_kind,fit_required,fit_partition,notes
+q1,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q2,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+q3,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q4,continuous,unchanged_scaled_continuous,continuous_numeric,False,NO_FIT,Escalada en B7; patch B8 no modifica valores
+q5,continuous,unchanged_scaled_continuous,continuous_numeric,False,NO_FIT,Escalada en B7; patch B8 no modifica valores
+q6,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q10,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q15,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q16,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q17,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q18,nominal_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+q19,nominal_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+q22,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q23,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q24,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+q25,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+q26,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q27,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q28,unknown_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+q29,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q30,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q31,nominal_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+q32,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q33,nominal_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+q34,unknown_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+q35,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q36,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q37,nominal_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+q38,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q39,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q40,unknown_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+q41,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q42,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q43,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q44,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+q45,unknown_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+q46,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q47,nominal_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+q48,nominal_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+q50,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q51,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q52,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q53,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q54,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q55,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q56,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q57,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q58,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q59,unknown_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q60,unknown_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q61,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q62,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q63,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q64,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q65,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q66,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+q67,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+q68,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+q69,unknown_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q70,unknown_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q71,unknown_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q72,unknown_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q73,nominal_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+q74,nominal_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+q75,nominal_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+q76,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q77,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q78,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q79,unknown_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q80,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+q81,ordinal_categorical,ordinal_encode,ordinal_numeric,True,train,Orden semántico auditado; sin_dato=-1; escape=-3; unseen=-2
+qn6,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn10,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn15,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn16,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn17,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn18,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn19,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn22,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn23,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn24,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn25,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn26,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn27,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn28,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn29,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn30,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn31,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn32,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn33,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn34,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn35,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn36,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn37,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn38,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn39,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn41,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn42,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn43,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn44,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn45,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn46,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn47,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn48,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn50,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn51,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn52,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn53,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn54,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn55,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn56,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn57,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn58,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn59,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn60,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn61,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn62,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn63,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn64,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn65,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn66,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn67,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn68,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn69,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn70,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn71,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn72,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn73,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn74,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn75,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn76,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn77,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn78,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn79,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn80,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qn81,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qnunwtg,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qnowtg,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qnobeseg,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qnff1g,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qnff2g,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qnff3g,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qntob2g,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qnnotb2g,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qnbcanyg,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qnc1g,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qnpe3g,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+qnpe5g,binary_categorical,one_hot,onehot_numeric,True,train,Vocabulario train-only; unseen test produce bloque all-zero
+q4q5_faltaba,binary_categorical,unchanged_binary_indicator,binary_numeric,False,NO_FIT,Indicador técnico 0/1 sin encoding

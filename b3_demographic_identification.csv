@@ -1,0 +1,4 @@
+﻿concept,column,paired_text_column,reason,confidence
+edad,q1,texto_q1,Las etiquetas observadas expresan edades en años y rangos de edad.,ALTA
+sexo,q2,texto_q2,Las etiquetas observadas son Masculino y Femenino.,ALTA
+grado,q3,texto_q3,Las etiquetas observadas expresan grados/años escolares ordenados.,ALTA

@@ -1,0 +1,4 @@
+feature_group,feature_n,synthetic_rows,total_cells,exactly_0_n,exactly_1_n,strictly_between_0_1_n,outside_0_1_n,fractional_n,audit_status
+onehot_numeric,401,17948,7197148,4850778,1422710,923660,0,923660,PENDIENTE_REVISION_SEMANTICA
+ordinal_numeric,41,17948,735868,260609,47680,,,323942,PENDIENTE_REVISION_SEMANTICA
+binary_indicator,1,17948,17948,10771,3272,3905,0,3905,PENDIENTE_REVISION_SEMANTICA

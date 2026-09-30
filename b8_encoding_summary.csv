@@ -1,0 +1,2 @@
+input_feature_n,previous_output_feature_n,output_feature_n,previous_ordinal_input_n,final_ordinal_input_n,previous_onehot_input_n,final_onehot_input_n,output_ordinal_columns_n,output_onehot_columns_n,changed_ordinal_to_nominal_n,changed_nominal_to_ordinal_n,unseen_test_categories_n,unseen_test_observations_n,missing_train_after,missing_test_after,patch_reason
+149,445,403,41,48,105,98,48,352,0,7,0,0,0,0,ORDINAL_SEMANTIC_REVIEW

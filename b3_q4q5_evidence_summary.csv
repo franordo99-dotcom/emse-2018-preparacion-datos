@@ -1,0 +1,7 @@
+﻿evidence_source,groups,min_missing_pct,max_missing_pct,absolute_range_pp,interpretation
+target,2,30.166686797922456,39.017259508116844,8.850572710194388,"La tasa cambia entre clases del target observado; asociación descriptiva, no causal."
+PSU,57,13.333333333333334,74.66666666666667,61.333333333333336,Heterogeneidad por agrupamiento observado; no atribuye causalidad a la escuela.
+stratum,255,9.644670050761421,67.54098360655738,57.896313555795956,Heterogeneidad descriptiva entre estratos observados.
+sexo,2,34.54229028889662,37.19711355867831,2.654823269781687,Variación descriptiva por categorías observadas de sexo.
+edad,8,27.2117296222664,63.829787234042556,36.61805761177615,Variación descriptiva por categorías observadas de edad.
+grado,5,27.00484108608714,47.478030576622125,20.473189490534985,Variación descriptiva por categorías observadas de grado.

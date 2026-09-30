@@ -1,0 +1,3 @@
+﻿column,fit_partition,mean_train,variance_train,scale_train,ddof,engine
+q4,train,1.6419039153915393,0.005964887707441984,0.07723268548640519,0,pandas_manual_sklearn_StandardScaler_equivalent
+q5,train,59.39016651665167,137.02691050332533,11.705849414003467,0,pandas_manual_sklearn_StandardScaler_equivalent

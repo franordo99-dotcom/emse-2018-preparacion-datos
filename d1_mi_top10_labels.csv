@@ -1,0 +1,11 @@
+rank,feature,source_column,mi_score,display_label,label_source,interpretation_note
+1,imc,B6:q4+B6:q5,0.00977376175440958,IMC,b11_feature_inventory.csv,"Índice derivado de peso y altura; asociación individual, no causalidad."
+2,q50,q50,0.00952134976869308,Días de actividad física (q50),b2_data_dictionary.csv,"Dominio vecino del target; q50 no interviene en la definición del target basada en q49."
+3,q61,q61,0.00874132901372133,Frecuencia de consumo de frutas (q61),b2_data_dictionary.csv,"Escala observada desde ausencia de consumo hasta cuatro o más veces por día."
+4,q2__1,q2,0.00825536882335445,Sexo: masculino (q2),"b11_feature_inventory.csv + b2_data_dictionary.csv","Categoría 1 del bloque one-hot q2; etiqueta trazada al par q2/texto_q2."
+5,q2__2,q2,0.00821664500701344,Sexo: femenino (q2),"b11_feature_inventory.csv + b2_data_dictionary.csv","Categoría 2 del bloque one-hot q2; etiqueta trazada al par q2/texto_q2."
+6,q4,q4,0.00714991987303670,Altura (m) (q4),b2_data_dictionary.csv,"Variable continua confirmada como altura en metros."
+7,q17,q17,0.00654788771852119,Frecuencia reportada (q17),b2_data_dictionary.csv,"Las etiquetas disponibles son cantidades crecientes; el CSV no aporta el enunciado completo."
+8,q46,q46,0.00635508897565024,Cantidad de parejas sexuales (q46),b2_data_dictionary.csv,"Las etiquetas observadas van desde ninguna relación sexual hasta seis o más personas."
+9,q19__1,q19,0.00620515977922204,Sin lesión grave en 12 meses (q19),"b11_feature_inventory.csv + b2_data_dictionary.csv","Categoría 1 del bloque one-hot q19; etiqueta trazada al par q19/texto_q19."
+10,qn19__2,qn19,0.00615743527206578,qn19: No (categoría 2),"b11_feature_inventory.csv + b2_data_dictionary.csv","Categoría 2 de la derivada qn19; se conserva el nombre técnico porque el enunciado completo no está disponible."

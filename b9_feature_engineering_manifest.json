@@ -1,0 +1,61 @@
+{
+  "block": "B9",
+  "source_predictive_block": "B8",
+  "physical_source_block": "B6",
+  "source_predictive_hashes": {
+    "b8_X_train.pkl": "8a51bfac0cbc3cd738501ea05e2690aad8fe1a24eb72d47110c47becd03d81a1",
+    "b8_X_test.pkl": "9aae8d702c86b1a8d6236512243239b0cab38d44b47cc84a0d257ec82ba5aaf2",
+    "b8_y_train.pkl": "d56b76137b4f79f62fcdff6a86435bd1c1e4a989f4535a54e93e008d504ee9ae",
+    "b8_y_test.pkl": "e145dfdc279855844a6ab9108cce2ae97e339e2ee4e2ead16b13576eccf1d889"
+  },
+  "physical_source_hashes": {
+    "b6_X_train.pkl": "f337d3779249a0f3fd8b9d4c828e355488dd25140868d9292106eabc6bf01cb3",
+    "b6_X_test.pkl": "cc47424e0cbc817412df3267ebc0438889899f54338f88b664381cb1f94a74bc",
+    "b6_y_train.pkl": "d56b76137b4f79f62fcdff6a86435bd1c1e4a989f4535a54e93e008d504ee9ae",
+    "b6_y_test.pkl": "e145dfdc279855844a6ab9108cce2ae97e339e2ee4e2ead16b13576eccf1d889"
+  },
+  "train_n": 44440,
+  "test_n": 11111,
+  "input_feature_n": 403,
+  "output_feature_n": 404,
+  "new_features": [
+    "imc"
+  ],
+  "IMC_SOURCE": "B6_IMPUTED_UNSCALED_Q4_Q5",
+  "IMC_FORMULA": "q5_kg / q4_m**2",
+  "IMC_FORMULA_TYPE": "FIXED_DETERMINISTIC_RULE",
+  "IMC_SCALER": "StandardScaler_equivalent",
+  "FIT_IMC_SCALER": "TRAIN_ONLY",
+  "TEST_USED_FOR_FIT": false,
+  "ddof": 0,
+  "engine": "pandas_manual_sklearn_StandardScaler_equivalent",
+  "IMC_DISCRETIZATION_B9": "NONE",
+  "TEST_FROZEN_AFTER_B5": true,
+  "outlier_policy_inherited": "RETENER_Y_MARCAR_SIN_MODIFICAR",
+  "q50_q51_status": "SAME_DOMAIN_REVIEW_NOT_HARD_LEAKAGE",
+  "unknown_11_status": "SEMANTIC_REVIEW_APPLIED",
+  "PATCH_REASON": "ORDINAL_SEMANTIC_REVIEW",
+  "PATCH_SOURCE": "REVISION_SEMANTICA_ORDINALES",
+  "B10_STATUS": "SMOTE_DEMONSTRATION_ONLY",
+  "DOWNSTREAM_TRAIN_SOURCE": "B9_ORIGINAL_TRAIN",
+  "DOWNSTREAM_TRAIN_N": 44440,
+  "DOWNSTREAM_SMOTE_SOURCE_ALLOWED": false,
+  "output_files": {
+    "b9_X_train.pkl": {
+      "sha256": "d963a26062232794abe54a1f94d0dcdbdc4db9bd481dadb855d91beb8e795972",
+      "bytes": 21381186
+    },
+    "b9_X_test.pkl": {
+      "sha256": "4eee083d1d9bd6e36280afacbc3493a3b69b70d031564dd5c8a3785cdfa2dfed",
+      "bytes": 5349937
+    },
+    "b9_y_train.pkl": {
+      "sha256": "d56b76137b4f79f62fcdff6a86435bd1c1e4a989f4535a54e93e008d504ee9ae",
+      "bytes": 756128
+    },
+    "b9_y_test.pkl": {
+      "sha256": "e145dfdc279855844a6ab9108cce2ae97e339e2ee4e2ead16b13576eccf1d889",
+      "bytes": 189535
+    }
+  }
+}

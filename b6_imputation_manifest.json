@@ -1,0 +1,42 @@
+{
+  "block": "B6",
+  "source_split_manifest": "b5_split_manifest.json",
+  "source_split_random_state": 42,
+  "source_train_record_membership_sha256": "c2842f0933a13f287d8be0fd18a5e365891e641346d7aa468e64bb358ed8a01c",
+  "source_test_record_membership_sha256": "29329ea93d0ea980547a0d20553b45348d6e88e4ffa209f99f97d78c252b391e",
+  "universe_n": 55551,
+  "train_n": 44440,
+  "test_n": 11111,
+  "input_feature_n": 148,
+  "output_feature_n": 149,
+  "continuous_strategy": "train_median_plus_joint_missing_indicator",
+  "learned_train_medians": {
+    "q4": 1.64,
+    "q5": 58.0
+  },
+  "categorical_strategy": "fixed_category_sin_dato",
+  "categorical_fill_value": "sin_dato",
+  "indicator": "q4q5_faltaba",
+  "FIT_PARTITION": "TRAIN_ONLY",
+  "TEST_USED_FOR_FIT": false,
+  "TEST_FROZEN_AFTER_B5": true,
+  "split_reexecuted": false,
+  "output_files": {
+    "b6_X_train.pkl": {
+      "sha256": "f337d3779249a0f3fd8b9d4c828e355488dd25140868d9292106eabc6bf01cb3",
+      "bytes": 55303689
+    },
+    "b6_X_test.pkl": {
+      "sha256": "cc47424e0cbc817412df3267ebc0438889899f54338f88b664381cb1f94a74bc",
+      "bytes": 13827831
+    },
+    "b6_y_train.pkl": {
+      "sha256": "d56b76137b4f79f62fcdff6a86435bd1c1e4a989f4535a54e93e008d504ee9ae",
+      "bytes": 756128
+    },
+    "b6_y_test.pkl": {
+      "sha256": "e145dfdc279855844a6ab9108cce2ae97e339e2ee4e2ead16b13576eccf1d889",
+      "bytes": 189535
+    }
+  }
+}

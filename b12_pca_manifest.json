@@ -1,0 +1,103 @@
+{
+  "block": "B12",
+  "source_block": "B11",
+  "source_manifest": "b11_selection_manifest.json",
+  "source_hashes": {
+    "b11_X_train.pkl": "e52cf6e843c4aa6ddb2c13b07b9318d2487a777566e2ac26447335b2b8ad315d",
+    "b11_X_test.pkl": "438d3bae975f9dd1425c4cc1d4a54b329731babeaa7c6220425161bcfb29d5b5",
+    "b11_y_train.pkl": "d56b76137b4f79f62fcdff6a86435bd1c1e4a989f4535a54e93e008d504ee9ae",
+    "b11_y_test.pkl": "e145dfdc279855844a6ab9108cce2ae97e339e2ee4e2ead16b13576eccf1d889",
+    "b11_selected_features.csv": "0f4dbf3e7869143360c0ec9c22effd70e8ed3ef0f7d9b74d0293bc3b63938f8e",
+    "b11_feature_inventory.csv": "e62aadd7e4d5026c917e29decaf220d42fdf7939b374e912154cc0eb22b75db7"
+  },
+  "train_n": 44440,
+  "test_n": 11111,
+  "input_feature_n": 30,
+  "output_feature_n": 13,
+  "PCA_SCALER": "StandardScaler",
+  "PCA_SCALER_FIT": "TRAIN_ONLY",
+  "PCA_METHOD": "sklearn.decomposition.PCA",
+  "sklearn_version": "1.7.2",
+  "PCA_SVD_SOLVER": "full",
+  "PCA_FIT_PARTITION": "TRAIN_ONLY",
+  "TEST_USED_FOR_FIT": false,
+  "PCA_VARIANCE_THRESHOLD": 0.9,
+  "PCA_COMPONENT_RULE": "MIN_COMPONENTS_FOR_90_PERCENT_TRAIN_VARIANCE",
+  "k80": 10,
+  "k90": 13,
+  "k95": 16,
+  "B11_SELECTION_USED_TARGET": true,
+  "B12_PCA_DIRECT_TARGET_USE": false,
+  "PCA_INPUT_IS_TARGET_INFORMED": true,
+  "B10_STATUS": "SMOTE_DEMONSTRATION_ONLY",
+  "DOWNSTREAM_TRAIN_SOURCE": "B9_ORIGINAL_TRAIN",
+  "DOWNSTREAM_SMOTE_SOURCE_ALLOWED": false,
+  "TEST_FROZEN_AFTER_B5": true,
+  "PCA_LIMITATION": "PCA is a linear Euclidean method designed for quantitative variables. Here it is applied to a mixed encoded space containing continuous, ordinal and one-hot features. This is a didactic approximation; MCA would be more natural for predominantly categorical data but is outside the scope of this TP/manual.",
+  "PCA_SIGN_INDETERMINACY": true,
+  "operation_flags": {
+    "new_split": false,
+    "new_imputation": false,
+    "reencoding": false,
+    "smote": false,
+    "new_feature_selection": false,
+    "model_training": false,
+    "target_passed_to_pca": false,
+    "test_used_for_scaler_fit": false,
+    "test_used_for_pca_fit": false
+  },
+  "output_files": {
+    "b12_pca_scaler_params.csv": {
+      "sha256": "26e50d9e0c6e08f47f8e251d387cce4c8b5afe4c2703cb7376afce190f33a706",
+      "bytes": 1839
+    },
+    "b12_pca_explained_variance.csv": {
+      "sha256": "3b4443104fc223df99205f50b0774e22a95597c2f31a3f1d6436ecb96a1588f9",
+      "bytes": 1887
+    },
+    "b12_pca_thresholds.csv": {
+      "sha256": "ab620bae35258793912fb13209dc60f382a719b38b3ad0d312cfe9a30ca2a6f6",
+      "bytes": 109
+    },
+    "b12_pca_loadings.csv": {
+      "sha256": "a2ff60f54a7d0e81d4eeb4e8b2e13d0eecd970d3df46c84dc44fc0bbd4d8d89f",
+      "bytes": 18763
+    },
+    "b12_pca_top_contributors.csv": {
+      "sha256": "23e46a30014c1e6421ce002ce748c7ce18db839e71c28cabb4419fdca1670da0",
+      "bytes": 3592
+    },
+    "b12_pca_tradeoffs.csv": {
+      "sha256": "347d03e879331d8021094dc2a6c3fa7640f322b8ac958e9675fae8b56e59a416",
+      "bytes": 577
+    },
+    "b12_pca_summary.csv": {
+      "sha256": "310a5f34ae57e4572adc0e500481cc047111e987b62f79d3eaaa81517e3287e9",
+      "bytes": 455
+    },
+    "b12_scree_plot.png": {
+      "sha256": "bebd064ce41bbf92876b2d5009346649ec68f86467972524da6a9cf86472b6ca",
+      "bytes": 68187
+    },
+    "b12_cumulative_variance.png": {
+      "sha256": "118cac656a768b1bc6e46a2abd22625e5cb3b6cfab32c17a6bdd2fb8eebd6bf6",
+      "bytes": 99105
+    },
+    "b12_X_train_pca.pkl": {
+      "sha256": "37d59322933b2cb8b1badda856340d5bd1bfdf62a8d8ac25c073653623c1ca82",
+      "bytes": 4978064
+    },
+    "b12_X_test_pca.pkl": {
+      "sha256": "02852eadd7ce4270f78e2dc4668423a3ae9cfa42a523766767760ced2361b2c1",
+      "bytes": 1245216
+    },
+    "b12_y_train.pkl": {
+      "sha256": "d56b76137b4f79f62fcdff6a86435bd1c1e4a989f4535a54e93e008d504ee9ae",
+      "bytes": 756128
+    },
+    "b12_y_test.pkl": {
+      "sha256": "e145dfdc279855844a6ab9108cce2ae97e339e2ee4e2ead16b13576eccf1d889",
+      "bytes": 189535
+    }
+  }
+}

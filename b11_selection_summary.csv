@@ -1,0 +1,2 @@
+﻿input_feature_n,selected_feature_n,reduction_n,reduction_pct,continuous_input_n,discrete_input_n,continuous_selected_n,discrete_selected_n,onehot_selected_n,ordinal_selected_n,indicator_selected_n,top_mi,median_mi,selected_min_mi,zero_mi_total_n,zero_mi_selected_n,q50_rank,q50_selected,q51_rank,q51_selected,train_n,test_n
+404,30,374,92.5742574257426,3,401,2,28,20,8,0,0.00977376175440958,0.000197292228454238,0.00399041183407492,0,0,2,True,17,True,44440,11111

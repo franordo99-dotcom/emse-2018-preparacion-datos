@@ -1,0 +1,3 @@
+﻿column,strategy,fit_partition,fit_observed_n,fit_missing_n,learned_value
+q4,median,train,28272,16168,1.64
+q5,median,train,28272,16168,58.0

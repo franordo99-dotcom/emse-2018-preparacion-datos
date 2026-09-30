@@ -1,0 +1,52 @@
+{
+  "block": "B7",
+  "source_block": "B6",
+  "source_manifest": "b6_imputation_manifest.json",
+  "source_output_hashes": {
+    "b6_X_train.pkl": "f337d3779249a0f3fd8b9d4c828e355488dd25140868d9292106eabc6bf01cb3",
+    "b6_X_test.pkl": "cc47424e0cbc817412df3267ebc0438889899f54338f88b664381cb1f94a74bc",
+    "b6_y_train.pkl": "d56b76137b4f79f62fcdff6a86435bd1c1e4a989f4535a54e93e008d504ee9ae",
+    "b6_y_test.pkl": "e145dfdc279855844a6ab9108cce2ae97e339e2ee4e2ead16b13576eccf1d889"
+  },
+  "train_n": 44440,
+  "test_n": 11111,
+  "input_feature_n": 149,
+  "output_feature_n": 149,
+  "scaler": "StandardScaler",
+  "scaler_semantics": "sklearn_StandardScaler_equivalent",
+  "scaled_columns": [
+    "q4",
+    "q5"
+  ],
+  "FIT_PARTITION": "TRAIN_ONLY",
+  "TEST_USED_FOR_FIT": false,
+  "TRANSFORM_PARTITIONS": [
+    "train",
+    "test"
+  ],
+  "engine": "pandas_manual_sklearn_StandardScaler_equivalent",
+  "ddof": 0,
+  "TEST_FROZEN_AFTER_B5": true,
+  "split_reexecuted": false,
+  "outlier_policy_inherited": "RETENER_Y_MARCAR_SIN_MODIFICAR",
+  "outlier_scaling_limitation": "q5 mean and scale may be influenced by its retained right tail and extremes",
+  "future_imc_policy": "FIT_STANDARD_SCALER_ON_TRAIN_ONLY_IF_IMC_CREATED_IN_B9",
+  "output_files": {
+    "b7_X_train.pkl": {
+      "sha256": "993b0e3a66ea22f301517cbe5b34bdda30d9e65720eed47b366e2598238b73cd",
+      "bytes": 55297186
+    },
+    "b7_X_test.pkl": {
+      "sha256": "db055f4863a9e979ffbab44b34be8fef620082d32675eb6ff2f633919e9cf1f3",
+      "bytes": 13821232
+    },
+    "b7_y_train.pkl": {
+      "sha256": "d56b76137b4f79f62fcdff6a86435bd1c1e4a989f4535a54e93e008d504ee9ae",
+      "bytes": 756128
+    },
+    "b7_y_test.pkl": {
+      "sha256": "e145dfdc279855844a6ab9108cce2ae97e339e2ee4e2ead16b13576eccf1d889",
+      "bytes": 189535
+    }
+  }
+}

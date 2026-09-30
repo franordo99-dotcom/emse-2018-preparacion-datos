@@ -1,0 +1,2 @@
+﻿feature,source_q4,source_q5,formula,fit_partition,mean_train,variance_train,scale_train,ddof,engine,TEST_USED_FOR_FIT
+imc,B6 q4 imputed unscaled,B6 q5 imputed unscaled,q5 / q4**2,train,21.983329935855565,14.358348567423459,3.789241159839719,0,pandas_manual_sklearn_StandardScaler_equivalent,False

@@ -1,0 +1,82 @@
+{
+  "block": "B10",
+  "source_block": "B9",
+  "source_hashes": {
+    "b9_X_train.pkl": "efa3c1bcc96322652c6250671c77afd6d416e7ab883ae7fed20fd066210641cd",
+    "b9_X_test.pkl": "eec257ac5e8a68e354d0da4d3617402e4a02f199c3bd6d55410b65f658536c69",
+    "b9_y_train.pkl": "d56b76137b4f79f62fcdff6a86435bd1c1e4a989f4535a54e93e008d504ee9ae",
+    "b9_y_test.pkl": "e145dfdc279855844a6ab9108cce2ae97e339e2ee4e2ead16b13576eccf1d889"
+  },
+  "train_original_n": 44440,
+  "train_resampled_n": 62388,
+  "synthetic_n": 17948,
+  "test_n": 11111,
+  "input_feature_n": 446,
+  "output_feature_n": 446,
+  "method": "SMOTE",
+  "implementation": "imblearn.over_sampling.SMOTE",
+  "imbalanced_learn_version": "0.14.2",
+  "scikit_learn_version": "1.7.2",
+  "sampling_strategy": "auto",
+  "random_state": 42,
+  "k_neighbors": 5,
+  "FIT_RESAMPLE_PARTITION": "TRAIN_ONLY",
+  "smote_input_dtype": "float64_numeric_copy",
+  "smote_input_dtype_reason": "prevent pandas integer dtype restoration from truncating synthetic interpolations",
+  "TEST_USED_FOR_FIT": false,
+  "TEST_RESAMPLED": false,
+  "TEST_FROZEN_AFTER_B5": true,
+  "target_before": {
+    "0": 31194,
+    "1": 13246
+  },
+  "target_after_train": {
+    "0": 31194,
+    "1": 31194
+  },
+  "target_test_untouched": {
+    "0": 7799,
+    "1": 3312
+  },
+  "SMOTE_ENCODED_SPACE_LIMITATION": "Vanilla SMOTE interpolates encoded categorical dimensions; synthetic categorical coordinates may be fractional.",
+  "unknown_11_status": "PENDIENTE_REVISION_SEMANTICA",
+  "q50_q51_status": "SAME_DOMAIN_REVIEW_NOT_HARD_LEAKAGE",
+  "output_files": {
+    "b10_class_distribution.csv": {
+      "sha256": "49a938b70911f6845d7df5999feec317a35ccb91ebc9e7f57bc944882750c952",
+      "bytes": 271
+    },
+    "b10_sample_origin.csv": {
+      "sha256": "59f16856211348bfddc37a3021a71d02b3e2bbc5ced0bc4492821483f48ac112",
+      "bytes": 1655368
+    },
+    "b10_smote_summary.csv": {
+      "sha256": "097e4ff812c705d551cf1fe45d8e1d095b002ccb81b06e81ba322128c1728459",
+      "bytes": 675
+    },
+    "b10_smote_categorical_interpolation_diagnostic.csv": {
+      "sha256": "0e69f126950e57a98fea24f0204b0a4a8332225c323797af01b5bf9d72416656",
+      "bytes": 390
+    },
+    "b10_feature_inventory.csv": {
+      "sha256": "2d4f02d10287c190268557cda3efd78ba1dfd085a914b81a8090bb00d57cb56a",
+      "bytes": 62421
+    },
+    "b10_X_train_smote.pkl": {
+      "sha256": "4c35543559ba5ff13268dc7f9275063b37ae5d4f4a8f4a4fbd0fdd6f3482e0a6",
+      "bytes": 224121589
+    },
+    "b10_y_train_smote.pkl": {
+      "sha256": "2c3597d11c7cac6eadd8c332895f424b1b18e60204986ebc2df3721444014634",
+      "bytes": 1890152
+    },
+    "b10_X_test.pkl": {
+      "sha256": "eec257ac5e8a68e354d0da4d3617402e4a02f199c3bd6d55410b65f658536c69",
+      "bytes": 5739270
+    },
+    "b10_y_test.pkl": {
+      "sha256": "e145dfdc279855844a6ab9108cce2ae97e339e2ee4e2ead16b13576eccf1d889",
+      "bytes": 189535
+    }
+  }
+}
