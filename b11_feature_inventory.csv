@@ -1,4 +1,4 @@
-output_column,source_column,output_position,output_kind,encoding,source_category,audit_status,b9_action,mi_rank,mi_score,is_discrete,selected_top30,b11_action
+output_column,source_column,output_position,output_kind,encoding,source_category,review_status,b9_action,mi_rank,mi_score,is_discrete,selected_top30,b11_action
 q4,q4,0,continuous_numeric,unchanged_scaled_B7,,CONFIRMED,unchanged_from_B8,6,0.0071499198730367,False,True,selected_top30
 q5,q5,1,continuous_numeric,unchanged_scaled_B7,,CONFIRMED,unchanged_from_B8,92,0.00189937752272118,False,False,not_selected_top30
 q4q5_faltaba,q4q5_faltaba,2,binary_numeric,unchanged_indicator,,CONFIRMED,unchanged_from_B8,42,0.00352333098585281,True,False,not_selected_top30

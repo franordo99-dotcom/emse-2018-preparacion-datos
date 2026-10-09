@@ -1,4 +1,4 @@
-output_column,source_column,output_position,output_kind,encoding,source_category,audit_status
+output_column,source_column,output_position,output_kind,encoding,source_category,review_status
 q4,q4,0,continuous_numeric,unchanged_scaled_B7,,CONFIRMED
 q5,q5,1,continuous_numeric,unchanged_scaled_B7,,CONFIRMED
 q4q5_faltaba,q4q5_faltaba,2,binary_numeric,unchanged_indicator,,CONFIRMED

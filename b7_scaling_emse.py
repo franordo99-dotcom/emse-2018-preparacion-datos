@@ -422,7 +422,7 @@ def main() -> None:
         "hashes_fuente_B6_verificados": all(source_checks.values()),
     }
 
-    print("=== FRONTERA B6 CANÓNICA ===")
+    print("=== FRONTERA B6 FINAL ===")
     print(f"Train: {len(X_train_b6)}")
     print(f"Test: {len(X_test_b6)}")
     print(f"Features: {X_train_b6.shape[1]}")
@@ -490,7 +490,7 @@ def main() -> None:
     if not all(checks.values()):
         failed = [name for name, passed in checks.items() if not passed]
         raise AssertionError(f"B7 detenido; checks fallidos: {failed}")
-    print(f"Resultado: {sum(checks.values())}/{len(checks)} checks OK. B7 finalizado; no se ejecutó B8.")
+    print("B7 finalizado.")
 
 
 if __name__ == "__main__":

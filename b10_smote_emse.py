@@ -52,7 +52,7 @@ LIMITATION = (
     "Vanilla SMOTE interpolates encoded categorical dimensions; "
     "synthetic categorical coordinates may be fractional."
 )
-UNKNOWN_AUDIT_STATUS = "PENDIENTE_REVISION_SEMANTICA"
+UNKNOWN_REVIEW_STATUS = "PENDIENTE_REVISION_SEMANTICA"
 Q50_Q51_STATUS = "SAME_DOMAIN_REVIEW_NOT_HARD_LEAKAGE"
 
 HARD_LEAKAGE_COLS = [
@@ -173,7 +173,7 @@ def diagnostic_row(
             else pd.NA
         ),
         "fractional_n": fractional,
-        "audit_status": "PENDIENTE_REVISION_SEMANTICA",
+        "review_status": "PENDIENTE_REVISION_SEMANTICA",
     }
 
 
@@ -457,7 +457,7 @@ def main() -> None:
         "target_after_train": train_after_counts,
         "target_test_untouched": test_counts,
         "SMOTE_ENCODED_SPACE_LIMITATION": LIMITATION,
-        "unknown_11_status": UNKNOWN_AUDIT_STATUS,
+        "unknown_11_status": UNKNOWN_REVIEW_STATUS,
         "q50_q51_status": Q50_Q51_STATUS,
         "output_files": {
             path.name: {
@@ -692,10 +692,7 @@ def main() -> None:
     if not all(checks.values()):
         failed = [name for name, passed in checks.items() if not passed]
         raise AssertionError(f"B10 detenido; checks fallidos: {failed}")
-    print(
-        f"Resultado: {sum(checks.values())}/{len(checks)} checks OK. "
-        "B10 finalizado; rama demostrativa sin uso aguas abajo."
-    )
+    print("B10 finalizado.")
 
 
 if __name__ == "__main__":

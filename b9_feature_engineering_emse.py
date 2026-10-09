@@ -52,7 +52,7 @@ DDOF = 0
 ENGINE = "pandas_manual_sklearn_StandardScaler_equivalent"
 OUTLIER_POLICY = "RETENER_Y_MARCAR_SIN_MODIFICAR"
 Q50_Q51_STATUS = "SAME_DOMAIN_REVIEW_NOT_HARD_LEAKAGE"
-UNKNOWN_AUDIT_STATUS = "SEMANTIC_REVIEW_APPLIED"
+UNKNOWN_REVIEW_STATUS = "SEMANTIC_REVIEW_APPLIED"
 PATCH_REASON = "ORDINAL_SEMANTIC_REVIEW"
 PATCH_SOURCE = "REVISION_SEMANTICA_ORDINALES"
 B10_STATUS = "SMOTE_DEMONSTRATION_ONLY"
@@ -147,7 +147,7 @@ def main() -> None:
     b8_inventory = pd.read_csv(B8_FEATURE_INVENTORY_PATH, encoding="utf-8-sig")
     expected_input_feature_n = int(b8_manifest["output_feature_n"])
     expected_output_feature_n = expected_input_feature_n + 1
-    unknown_audit_status = b8_manifest["unknown_categorical_audit_status"]
+    unknown_review_status = b8_manifest["unknown_categorical_review_status"]
 
     b6_paths = [
         B6_X_TRAIN_PATH,
@@ -305,7 +305,7 @@ def main() -> None:
                 "output_kind": "continuous_numeric",
                 "encoding": "physical_formula_then_train_standard_scaler",
                 "source_category": "",
-                "audit_status": "CONFIRMED_B9",
+                "review_status": "CONFIRMED_B9",
                 "b9_action": "new_feature_imc_scaled",
             }
         ]
@@ -336,7 +336,7 @@ def main() -> None:
                 "inf_train_after": int(np.isinf(output_train_array).sum()),
                 "inf_test_after": int(np.isinf(output_test_array).sum()),
                 "q50_q51_status": Q50_Q51_STATUS,
-                "unknown_11_status": unknown_audit_status,
+                "unknown_11_status": unknown_review_status,
             }
         ]
     )
@@ -377,7 +377,7 @@ def main() -> None:
         "TEST_FROZEN_AFTER_B5": TEST_FROZEN_AFTER_B5,
         "outlier_policy_inherited": OUTLIER_POLICY,
         "q50_q51_status": Q50_Q51_STATUS,
-        "unknown_11_status": unknown_audit_status,
+        "unknown_11_status": unknown_review_status,
         "PATCH_REASON": PATCH_REASON,
         "PATCH_SOURCE": PATCH_SOURCE,
         "B10_STATUS": B10_STATUS,
@@ -594,8 +594,8 @@ def main() -> None:
     print(f"{len(original_columns)} features B8 train intactas: {checks['B8_train_all_features_intactas']}")
     print(f"{len(original_columns)} features B8 test intactas: {checks['B8_test_all_features_intactas']}")
     print(f"q4/q5/indicador intactos: {checks['q4_intacta_B8'] and checks['q5_intacta_B8'] and checks['indicador_intacto']}")
-    print(f"q50/q51 status: {Q50_Q51_STATUS}; encoding ordinal auditado en patch")
-    print(f"Unknown 11 status: {unknown_audit_status}")
+    print(f"q50/q51 status: {Q50_Q51_STATUS}; encoding ordinal revisado")
+    print(f"Unknown 11 status: {unknown_review_status}")
     print(f"OUTLIERS_POLICY_B4 = {OUTLIER_POLICY}")
     print("No hubo clipping, winsorización, eliminación ni outlier→NaN.")
 
@@ -609,13 +609,13 @@ def main() -> None:
     if not all(checks.values()):
         failed = [name for name, passed in checks.items() if not passed]
         raise AssertionError(f"B9 detenido; checks fallidos: {failed}")
-    print(f"Resultado: {sum(checks.values())}/{len(checks)} checks OK. B9 regenerado; no se ejecutó B10 ni B11.")
     print("SEMANTIC_PATCH_APPLIED = True")
     print(f"B10_STATUS = {B10_STATUS}")
     print(f"DOWNSTREAM_TRAIN_SOURCE = {DOWNSTREAM_TRAIN_SOURCE}")
     print(f"DOWNSTREAM_TRAIN_N = {EXPECTED_TRAIN_N}")
     print(f"DOWNSTREAM_SMOTE_SOURCE_ALLOWED = {DOWNSTREAM_SMOTE_SOURCE_ALLOWED}")
     print(f"TEST_FROZEN_AFTER_B5 = {TEST_FROZEN_AFTER_B5}")
+    print("B9 finalizado.")
 
 
 if __name__ == "__main__":

@@ -1,37 +1,28 @@
 # Glosario del repositorio — TP Análisis de Datos · EMSE 2018
 
-Este documento surge de una inspección estática del contenido existente en disco. No se ejecutó ningún script del pipeline ni se recalculó ningún resultado. Las descripciones se basan en imports, constantes, funciones, lecturas, escrituras, validaciones y manifests presentes en el repositorio.
-
 ## Estructura de carpetas
 
 ```text
-Análisis de Datos/
+emse-2018-preparacion-datos/
 ├── README.md, GLOSARIO_REPO.md, .gitignore
 ├── b0_setup_emse.py ... b12_pca_emse.py
-│   └── scripts del pipeline B0–B12; B8 tiene script base y patch semántico
-├── b2_*.csv ... b13_*.{csv,md}
-│   └── artefactos tabulares, manifests, matrices persistidas y documentación
-├── b12_*.png
-│   └── gráficos PCA guardados en la raíz
-├── outputs/
-│   ├── b2_figures/                 # 14 figuras de EDA
-│   ├── b3_figures/                 # 8 figuras de faltantes
-│   └── b4_figures/                 # 9 figuras de outliers
-├── EMSE_DatosAbiertos.csv          # fuente de datos del pipeline
-├── cuestionario-emse-2018.pdf      # material de referencia; no es autoridad automática de mapeo
-├── d1_mi_top10_*                   # artefactos de entrega posteriores a B13, sin script visible
-└── _no_entrega/                    # material ajeno o auxiliar, preservado e ignorado
-    ├── CEIA_Analisis_de_datos/, heart-failure-eda/
-    ├── wholesale_customers.csv, wholesale_customers_eda.ipynb
-    ├── inspect_wholesale_customers.py, __pycache__/
-    └── consigna PDF y manual DOCX
+│   └── scripts B0–B12; B8 incluye una revisión semántica de ordinales
+├── b2_*.csv ... b12_*.csv, b5_*.json ... b12_*.json
+│   └── resultados tabulares, inventarios y manifests
+├── b13_narrative_master.md, b13_pipeline_final.md
+├── b13_key_numbers.csv, b13_test_boundary_ledger.csv
+├── b12_scree_plot.png, b12_cumulative_variance.png
+├── d1_mi_top10_*
+│   └── gráfico PNG/SVG, etiquetas CSV y manifest JSON de entrega
+└── outputs/
+    ├── b2_figures/                 # 14 figuras de EDA
+    ├── b3_figures/                 # 8 figuras de faltantes
+    └── b4_figures/                 # 9 figuras de outliers
 ```
-
-El repositorio Git de esta carpeta tiene actualmente cero archivos versionados: los archivos de entrega aparecen como no seguidos por Git. `_no_entrega/` está ignorado. Los dos proyectos anidados preservados allí poseen sus propios metadatos `.git` y no forman parte del pipeline EMSE B0–B13 documentado aquí.
 
 ## Bloques B0–B13
 
-### B0 — Setup, carga y auditoría estructural
+### B0 — Setup, carga y verificación estructural
 
 - **ETAPA:** B0 — Setup y carga del dataset.
 - **SCRIPT(S):** `b0_setup_emse.py`.
@@ -65,7 +56,7 @@ El repositorio Git de esta carpeta tiene actualmente cero archivos versionados: 
 - **QUÉ HACE:** parte de los resúmenes B2, reconstruye el universo supervisado y estudia la co-ausencia `q4`/`q5` por target, PSU, estrato y variables demográficas identificables. Evalúa candidatos de branching con criterios conservadores y calcula co-ocurrencia de faltantes sin imputar.
 - **ENTRADAS:** `EMSE_DatosAbiertos.csv`, `b2_data_dictionary.csv`, `b2_missing_summary.csv`; funciones de B0/B1.
 - **SALIDAS:** `b3_missing_diagnosis.csv`, `b3_q4q5_missing_by_target.csv`, `b3_q4q5_missing_by_psu.csv`, `b3_q4q5_missing_by_stratum.csv`, `b3_q4q5_missing_by_sex.csv`, `b3_q4q5_missing_by_age.csv`, `b3_q4q5_missing_by_grade.csv`, `b3_q4q5_evidence_summary.csv`, `b3_demographic_identification.csv`, `b3_branching_candidates.csv`, `b3_missing_cooccurrence.csv`; 8 PNG en `outputs/b3_figures/`.
-- **CHECKS:** universo y valores originales preservados; máscaras `q4`/`q5` idénticas y conteo contractual; `qn40` totalmente faltante y marcado como vacío informativo; ninguna baja de filas/columnas ni transformación; `ESTRUCTURAL_DEMOSTRADO` sólo con match exacto; ausencia de `MCAR_CONFIRMADO`/`MNAR_CONFIRMADO`; evidencia informada para cada diagnóstico; contradicciones con MAR marcadas; artefactos B2 sin modificación y salidas existentes.
+- **CHECKS:** universo y valores originales preservados; máscaras `q4`/`q5` idénticas y conteo esperado; `qn40` totalmente faltante y marcado como vacío informativo; ninguna baja de filas/columnas ni transformación; `ESTRUCTURAL_DEMOSTRADO` sólo con match exacto; ausencia de `MCAR_CONFIRMADO`/`MNAR_CONFIRMADO`; evidencia informada para cada diagnóstico; contradicciones con MAR marcadas; artefactos B2 sin modificación y salidas existentes.
 
 ### B4 — Detección y política de outliers
 
@@ -103,14 +94,14 @@ El repositorio Git de esta carpeta tiene actualmente cero archivos versionados: 
 - **SALIDAS:** `b7_scaler_params.csv`, `b7_scaling_summary.csv`, `b7_feature_inventory.csv`, `b7_scaling_manifest.json`, `b7_X_train.pkl`, `b7_X_test.pkl`, `b7_y_train.pkl`, `b7_y_test.pkl`.
 - **CHECKS:** manifests/hashes, tamaños, índices, targets y faltantes B6; columnas escaladas exactamente `q4`/`q5`; fit train-only y `ddof=0`; media≈0/std≈1 en train; indicador, categóricas y `sin_dato` intactos; exclusiones vigentes; ninguna operación posterior; artefactos recargables.
 
-### B8 — Encoding categórico y patch semántico
+### B8 — Encoding categórico
 
 - **ETAPA:** B8 — Encoding train-only; revisión semántica posterior de ordinales.
 - **SCRIPT(S):** `b8_encoding_emse.py`; `b8_patch_ordinal_semantic_review_emse.py`.
-- **QUÉ HACE:** el script base construye mappings ordinales y vocabularios one-hot sólo con train, mantiene `q4`, `q5` y `q4q5_faltaba`, y maneja categorías de test no vistas sin refit. El patch relee B7, el diccionario B2 y labels del CSV, audita las 41 ordinales previas, modifica el tratamiento de variables señaladas y promueve una nueva versión canónica B8 después de validar un staging temporal.
-- **ENTRADAS:** base: `b7_scaling_manifest.json`, `b7_feature_inventory.csv`, `b7_X_train.pkl`, `b7_X_test.pkl`, `b7_y_train.pkl`, `b7_y_test.pkl`, `b6_feature_inventory.csv`, `b2_data_dictionary.csv`. Patch: esos artefactos B7/B2, `EMSE_DatosAbiertos.csv` y el `b8_encoding_plan.csv` previo.
-- **SALIDAS:** `b8_encoding_plan.csv`, `b8_unknown_categorical_proposals.csv`, `b8_ordinal_mappings.csv`, `b8_onehot_vocabularies.csv`, `b8_unseen_test_categories.csv`, `b8_feature_inventory.csv`, `b8_encoding_summary.csv`, `b8_encoding_manifest.json`, `b8_X_train.pkl`, `b8_X_test.pkl`, `b8_y_train.pkl`, `b8_y_test.pkl`; el patch agrega `b8_patch_ordinal_review.csv` y reemplaza los artefactos canónicos anteriores tras los checks.
-- **CHECKS:** frontera/target B7 intactos; input de 149 features sin NaN; continuas e indicador sin recodificar; `q50`/`q51` y casos ambiguos documentados; vocabularios/mappings train-only y test sin fit; salida numérica/finita con columnas alineadas; leakage, metadata y textos fuera; ninguna discretización, IMC, SMOTE, selección, PCA o modelo. El patch añade auditoría completa de las 41 ordinales, labels/decisión semántica por variable y verificaciones específicas de `q59`, `q60`, `q69`–`q72`, `q79`, `q28`, `q34`, `q40` y `q45`.
+- **QUÉ HACE:** construye mappings ordinales y vocabularios one-hot sólo con train, mantiene `q4`, `q5` y `q4q5_faltaba`, y maneja categorías de test no vistas sin refit. La revisión semántica utiliza B7, el diccionario B2 y las etiquetas del CSV para verificar el orden de las categorías y validar la representación final.
+- **ENTRADAS:** base: `b7_scaling_manifest.json`, `b7_feature_inventory.csv`, `b7_X_train.pkl`, `b7_X_test.pkl`, `b7_y_train.pkl`, `b7_y_test.pkl`, `b6_feature_inventory.csv`, `b2_data_dictionary.csv`. Revisión semántica: esos artefactos B7/B2, `EMSE_DatosAbiertos.csv` y el `b8_encoding_plan.csv` previo.
+- **SALIDAS:** `b8_encoding_plan.csv`, `b8_unknown_categorical_proposals.csv`, `b8_ordinal_mappings.csv`, `b8_onehot_vocabularies.csv`, `b8_unseen_test_categories.csv`, `b8_feature_inventory.csv`, `b8_encoding_summary.csv`, `b8_encoding_manifest.json`, `b8_X_train.pkl`, `b8_X_test.pkl`, `b8_y_train.pkl`, `b8_y_test.pkl`; la revisión semántica agrega `b8_patch_ordinal_review.csv` y reemplaza los artefactos finales anteriores tras los checks.
+- **CHECKS:** frontera/target B7 intactos; input de 149 features sin NaN; continuas e indicador sin recodificar; `q50`/`q51` y casos ambiguos documentados; vocabularios/mappings train-only y test sin fit; salida numérica/finita con columnas alineadas; leakage, metadata y textos fuera; ninguna discretización, IMC, SMOTE, selección, PCA o modelo. La revisión semántica añade revisión completa de las 41 ordinales, labels/decisión semántica por variable y verificaciones específicas de `q59`, `q60`, `q69`–`q72`, `q79`, `q28`, `q34`, `q40` y `q45`.
 
 ### B9 — Feature engineering de IMC
 
@@ -134,10 +125,10 @@ El repositorio Git de esta carpeta tiene actualmente cero archivos versionados: 
 
 - **ETAPA:** B11 — Feature selection MI Top 30.
 - **SCRIPT(S):** `b11_mutual_information_selection_emse.py`.
-- **QUÉ HACE:** carga el B9 parcheado y calcula `mutual_info_classif` sólo en el train original, con máscara discreta derivada del inventario, semilla 42 y 3 vecinos. Ordena por MI descendente/nombre ascendente, retiene las 30 columnas prefijadas y aplica esa selección a test; MI mide asociación, no causalidad.
+- **QUÉ HACE:** carga el B9 con la revisión semántica y calcula `mutual_info_classif` sólo en el train original, con máscara discreta derivada del inventario, semilla 42 y 3 vecinos. Ordena por MI descendente/nombre ascendente, retiene las 30 columnas prefijadas y aplica esa selección a test; MI mide asociación, no causalidad.
 - **ENTRADAS:** `b9_feature_engineering_manifest.json`, `b9_feature_inventory.csv`, `b9_X_train.pkl`, `b9_X_test.pkl`, `b9_y_train.pkl`, `b9_y_test.pkl`.
 - **SALIDAS:** `b11_mutual_information_ranking.csv`, `b11_selected_features.csv`, `b11_source_feature_mi_summary.csv`, `b11_selection_summary.csv`, `b11_feature_inventory.csv`, `b11_selection_manifest.json`, `b11_X_train.pkl`, `b11_X_test.pkl`, `b11_y_train.pkl`, `b11_y_test.pkl`.
-- **CHECKS:** train original de 44.440 y no B10; hashes B9; matrices numéricas/finitas/alineadas; tipos discretos válidos sin fracciones de SMOTE; MI sólo en train con configuración contractual; 404 scores, ranking/tie-break y exactamente Top 30; matrices seleccionadas idénticas a columnas B9; exclusiones; sin reencoding/scaling/imputación/SMOTE/PCA/modelo; contrato asociación-no-causalidad; artefactos recargables.
+- **CHECKS:** train original de 44.440 y no B10; hashes B9; matrices numéricas/finitas/alineadas; tipos discretos válidos sin fracciones de SMOTE; MI sólo en train con configuración definida; 404 scores, ranking/tie-break y exactamente Top 30; matrices seleccionadas idénticas a columnas B9; exclusiones; sin reencoding/scaling/imputación/SMOTE/PCA/modelo; interpretación como asociación; artefactos recargables.
 
 ### B12 — PCA train-only
 
@@ -151,15 +142,14 @@ El repositorio Git de esta carpeta tiene actualmente cero archivos versionados: 
 ### B13 — Consolidación documental
 
 - **ETAPA:** B13 — Consolidación final de narrativa, cifras y trazabilidad metodológica.
-- **SCRIPT(S):** **no existe ningún `b13_*.py` en disco**.
-- **QUÉ HACE:** no puede reconstruirse una implementación desde código porque no hay script. Los artefactos existentes consolidan la narrativa, las cifras clave, la frontera de test y el pipeline textual, sin agregar fit ni transformaciones.
-- **ENTRADAS:** no determinables desde un script. La documentación referencia artefactos de B5–B12, incluidos split, transformaciones, ranking MI, selección y resultados PCA.
+- **QUÉ HACE:** consolidación documental de resultados: narrativa, cifras clave, frontera train/test y pipeline final.
+- **ENTRADAS:** resultados y documentación de B5–B12: split, transformaciones, ranking MI, selección y PCA.
 - **SALIDAS:** `b13_narrative_master.md`, `b13_key_numbers.csv`, `b13_pipeline_final.md`, `b13_test_boundary_ledger.csv`.
-- **CHECKS:** no hay asserts ejecutables visibles. Los documentos registran B10 demostrativo/no downstream, train downstream desde B9 original, test congelado, B11 Top 30 y B12 con 13 componentes.
+- **VERIFICACIONES:** B10 permanece como demostración; el flujo posterior usa el train original B9; test permanece congelado; B11 conserva Top 30 y B12 conserva 13 componentes.
 
 ## Inventario de artefactos
 
-Se incluyen los artefactos técnicos del pipeline y los productos de entrega encontrados en disco. No se incluyen scripts `.py`, fuentes de datos/manuales, bytecode, material de preparación interna ni archivos de proyectos ajenos al TP EMSE.
+El inventario lista los artefactos publicados. Las entradas de datos y las matrices `.pkl` se obtienen localmente; los nombres de estas matrices se conservan en las entradas, salidas y dependencias de cada bloque.
 
 | Bloque | Archivo | Tipo |
 |---|---|---|
@@ -234,18 +224,10 @@ Se incluyen los artefactos técnicos del pipeline y los productos de entrega enc
 | B6 | `b6_imputation_manifest.json` | json |
 | B6 | `b6_indicator_summary.csv` | csv |
 | B6 | `b6_missing_before_after.csv` | csv |
-| B6 | `b6_X_test.pkl` | pickle |
-| B6 | `b6_X_train.pkl` | pickle |
-| B6 | `b6_y_test.pkl` | pickle |
-| B6 | `b6_y_train.pkl` | pickle |
 | B7 | `b7_feature_inventory.csv` | csv |
 | B7 | `b7_scaler_params.csv` | csv |
 | B7 | `b7_scaling_manifest.json` | json |
 | B7 | `b7_scaling_summary.csv` | csv |
-| B7 | `b7_X_test.pkl` | pickle |
-| B7 | `b7_X_train.pkl` | pickle |
-| B7 | `b7_y_test.pkl` | pickle |
-| B7 | `b7_y_train.pkl` | pickle |
 | B8 | `b8_encoding_manifest.json` | json |
 | B8 | `b8_encoding_plan.csv` | csv |
 | B8 | `b8_encoding_summary.csv` | csv |
@@ -255,40 +237,24 @@ Se incluyen los artefactos técnicos del pipeline y los productos de entrega enc
 | B8 | `b8_patch_ordinal_review.csv` | csv |
 | B8 | `b8_unknown_categorical_proposals.csv` | csv |
 | B8 | `b8_unseen_test_categories.csv` | csv |
-| B8 | `b8_X_test.pkl` | pickle |
-| B8 | `b8_X_train.pkl` | pickle |
-| B8 | `b8_y_test.pkl` | pickle |
-| B8 | `b8_y_train.pkl` | pickle |
 | B9 | `b9_feature_engineering_manifest.json` | json |
 | B9 | `b9_feature_engineering_summary.csv` | csv |
 | B9 | `b9_feature_inventory.csv` | csv |
 | B9 | `b9_imc_by_missing_indicator.csv` | csv |
 | B9 | `b9_imc_raw_summary.csv` | csv |
 | B9 | `b9_imc_scaler_params.csv` | csv |
-| B9 | `b9_X_test.pkl` | pickle |
-| B9 | `b9_X_train.pkl` | pickle |
-| B9 | `b9_y_test.pkl` | pickle |
-| B9 | `b9_y_train.pkl` | pickle |
 | B10 | `b10_class_distribution.csv` | csv |
 | B10 | `b10_feature_inventory.csv` | csv |
 | B10 | `b10_sample_origin.csv` | csv |
 | B10 | `b10_smote_categorical_interpolation_diagnostic.csv` | csv |
 | B10 | `b10_smote_manifest.json` | json |
 | B10 | `b10_smote_summary.csv` | csv |
-| B10 | `b10_X_test.pkl` | pickle |
-| B10 | `b10_X_train_smote.pkl` | pickle |
-| B10 | `b10_y_test.pkl` | pickle |
-| B10 | `b10_y_train_smote.pkl` | pickle |
 | B11 | `b11_feature_inventory.csv` | csv |
 | B11 | `b11_mutual_information_ranking.csv` | csv |
 | B11 | `b11_selected_features.csv` | csv |
 | B11 | `b11_selection_manifest.json` | json |
 | B11 | `b11_selection_summary.csv` | csv |
 | B11 | `b11_source_feature_mi_summary.csv` | csv |
-| B11 | `b11_X_test.pkl` | pickle |
-| B11 | `b11_X_train.pkl` | pickle |
-| B11 | `b11_y_test.pkl` | pickle |
-| B11 | `b11_y_train.pkl` | pickle |
 | B12 | `b12_cumulative_variance.png` | png |
 | B12 | `b12_pca_explained_variance.csv` | csv |
 | B12 | `b12_pca_loadings.csv` | csv |
@@ -299,10 +265,6 @@ Se incluyen los artefactos técnicos del pipeline y los productos de entrega enc
 | B12 | `b12_pca_top_contributors.csv` | csv |
 | B12 | `b12_pca_tradeoffs.csv` | csv |
 | B12 | `b12_scree_plot.png` | png |
-| B12 | `b12_X_test_pca.pkl` | pickle |
-| B12 | `b12_X_train_pca.pkl` | pickle |
-| B12 | `b12_y_test.pkl` | pickle |
-| B12 | `b12_y_train.pkl` | pickle |
 | B13 | `b13_key_numbers.csv` | csv |
 | B13 | `b13_narrative_master.md` | md |
 | B13 | `b13_pipeline_final.md` | md |
@@ -312,11 +274,11 @@ Se incluyen los artefactos técnicos del pipeline y los productos de entrega enc
 | D1 | `d1_mi_top10_labels.csv` | csv |
 | D1 | `d1_mi_top10_manifest.json` | json |
 
-No hay artefactos persistidos de B0 ni B1: ambos scripts imprimen su auditoría y trabajan en memoria.
+No hay artefactos persistidos de B0 ni B1: ambos scripts imprimen sus verificaciones y trabajan en memoria.
 
 ## Cadena de dependencias
 
-Orden reproducible inferido de las lecturas reales del código:
+Orden de ejecución y archivos que conectan los bloques:
 
 ```text
 EMSE_DatosAbiertos.csv
@@ -345,20 +307,20 @@ B7 b7_scaling_emse.py
 └── b7_X/y_{train,test}.pkl + manifest/inventario
     ▼
 B8 b8_encoding_emse.py
-└── B8 patch b8_patch_ordinal_semantic_review_emse.py
-    └── b8_X/y_{train,test}.pkl canónicos + mappings/vocabularios
+└── B8 revisión semántica b8_patch_ordinal_semantic_review_emse.py
+    └── b8_X/y_{train,test}.pkl finales + mappings/vocabularios
         ▼
 B9 b9_feature_engineering_emse.py
 ├── matriz predictiva desde B8
 ├── q4/q5 físicos desde B6
-└── b9_X/y_{train,test}.pkl canónicos (train original)
+└── b9_X/y_{train,test}.pkl finales (train original)
     ├──► B11 b11_mutual_information_selection_emse.py
     │    └── b11_X/y_{train,test}.pkl + ranking Top 30
     │         ▼
     │       B12 b12_pca_emse.py
     │         └── b12_X/y_* + varianza/loadings/gráficos
     │              ▼
-    │            B13 artefactos documentales (sin script visible)
+    │            B13 consolidación documental de resultados
     │
     └──► B10 b10_smote_emse.py
          └── RAMA LATERAL: SMOTE_DEMONSTRATION_ONLY
@@ -366,15 +328,3 @@ B9 b9_feature_engineering_emse.py
 ```
 
 La frontera de evaluación ocurre en B5. B6–B9 transforman train/test preservando esa membresía y aprendiendo parámetros sólo desde train según sus manifests y checks. B11 aprende el ranking MI en el train original y sólo aplica las columnas elegidas a test. B12 ajusta scaler/PCA en train y transforma test. No existe entrenamiento de un modelo en B0–B13.
-
-## Huecos y observaciones
-
-- **B13 no tiene script:** existen cuatro artefactos documentales `b13_*`, pero ningún `b13_*.py`. Por eso no puede verificarse desde código qué comando exacto los generó ni reproducirse B13 automáticamente con lo que hay en disco.
-- **B10 conserva un contrato anterior al patch B8→B9:** `b10_smote_emse.py` y `b10_smote_manifest.json` esperan/registran 446 features, mientras los manifests canónicos actuales registran B8 con 403, B9 con 404 y B11 con 404 entradas. Los artefactos B10 corresponden a la rama demostrativa previa y no son compatibles como salida derivada del B9 canónico actual sin una revisión; esto no afecta el downstream porque B11/B12 leen B9 original, no B10.
-- **Script de entrega ausente:** `d1_mi_top10_*` existe como conjunto de artefactos, pero no hay script generador con ese prefijo. Su procedencia sólo puede rastrearse por su manifest.
-- **Archivos mencionados por B0–B12:** durante la inspección estática no se encontró ningún input u output explícito de esos scripts ausente en disco. Esto no prueba que una reejecución sea exitosa; sólo confirma presencia nominal.
-- **B0/B1 sin artefactos persistidos:** sus resultados se emiten por consola. La reproducibilidad de sus outputs depende de volver a ejecutar los scripts, acción deliberadamente no realizada en este relevamiento.
-- **B8 tiene dos generadores para el mismo conjunto canónico:** el script base y el patch escriben los mismos nombres `b8_*`; el patch reemplaza esos artefactos después de validar su staging. El contenido actual corresponde al contrato parcheado (manifest: 403 features de salida).
-- **Estado de Git:** el repositorio raíz no tiene archivos seguidos; los archivos de entrega aparecen como untracked y `_no_entrega/` queda ignorado. Esto impide usar historial Git para atribuir qué versión creó cada artefacto.
-- **Material ajeno o auxiliar:** `CEIA_Analisis_de_datos/`, `heart-failure-eda/`, `wholesale_customers.csv`, `wholesale_customers_eda.ipynb`, `inspect_wholesale_customers.py`, el bytecode, la consigna PDF y el manual DOCX se preservan en `_no_entrega/`. Ninguno es leído por los scripts EMSE B0–B13 inspeccionados. El cuestionario EMSE permanece en la raíz como referencia específica de la fuente, no como input de script.
-- **Alcance semántico:** los scripts usan los pares código/texto del CSV y no una equivalencia automática con la numeración del PDF. En este glosario MI se describe como asociación estadística; no se atribuyen causalidad, influencia ni performance predictiva.

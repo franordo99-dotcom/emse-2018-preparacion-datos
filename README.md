@@ -22,12 +22,12 @@ El target `target_pa_oms5` se construye desde el código **y la etiqueta de resp
 | B5 | Split | Crea y congela la frontera train/test individual estratificada. |
 | B6 | Imputación | Aprende medianas de `q4`/`q5` en train; agrega indicador y `sin_dato`. |
 | B7 | Scaling | Estandariza sólo `q4`/`q5` con parámetros de train. |
-| B8 | Encoding y patch | Codifica categóricas con vocabularios de train y corrige ordinales según etiquetas. |
+| B8 | Encoding | Codifica categóricas con vocabularios de train (ordinal u one-hot según las etiquetas) |
 | B9 | IMC | Calcula IMC con `q4`/`q5` físicos de B6 y lo escala desde train. |
 | B10 | SMOTE | Demostración lateral de remuestreo sólo en train; no alimenta B11/B12. |
 | B11 | Selección MI | Ordena asociación individual con el target en train y retiene Top 30. |
 | B12 | PCA | Ajusta scaler/PCA sobre Top 30 en train y conserva 13 componentes. |
-| B13 | Consolidación | Reúne narrativa, cifras, trazabilidad de la frontera y el pipeline final; no tiene script. |
+| B13 | Consolidación | Reúne narrativa, cifras, trazabilidad de la frontera y el pipeline final. |
 
 Para entradas, salidas y checks de cada bloque, consultar [GLOSARIO_REPO.md](GLOSARIO_REPO.md). Los gráficos descriptivos están en `outputs/`; las matrices, resúmenes y manifests están en la raíz.
 
@@ -59,13 +59,13 @@ python b12_pca_emse.py
 
 ## Datos
 
-El dataset es **EMSE 2018 (datos abiertos)**. Descargarlo desde la fuente oficial y colocarlo en la raíz del repositorio con el nombre exacto `EMSE_DatosAbiertos.csv`. Por su tamaño y por la política de publicación de esta entrega, el CSV no se versiona en GitHub: `.gitignore` lo excluye.
+El dataset es **EMSE 2018 (datos abiertos)**. [Descargar el dataset desde la fuente oficial](https://datos.salud.gob.ar/dataset/base-de-datos-de-la-3-encuesta-mundial-de-salud-escolar-emse-con-resultados-nacionales-argentina/archivo/509979de-3a24-4f86-8859-15e177eccb20) y colocarlo en la raíz del repositorio con el nombre exacto `EMSE_DatosAbiertos.csv`. Por su tamaño, el CSV no se versiona en GitHub: `.gitignore` lo excluye.
 
 Los archivos `.pkl` tampoco se versionan. Se regeneran ejecutando el pipeline en orden (`B0 → B12`) después de contar con el CSV en la raíz; los pickles aparecen a partir de B6. B0–B4 producen diagnósticos y artefactos tabulares/gráficos; B5 crea la frontera train/test que consumen los bloques siguientes.
 
-**B5 es la frontera train/test.** El patch B8 reemplaza la salida canónica del B8 base; B9 lee la matriz B8 parcheada y las unidades físicas imputadas de B6. B11/B12 leen el **train original de B9**, no el train remuestreado. B13 consiste en entregables documentales existentes y no tiene comando de ejecución en este repositorio.
+**B5 separa train y test.** B8 incluye una revisión semántica de las variables ordinales según sus etiquetas. B9 usa esa codificación y los valores físicos de altura y peso imputados en B6. B11 y B12 usan el **train original de B9**, no el remuestreado. B13 reúne la documentación de resultados.
 
-**B10 no se ejecuta en la rama principal.** Los artefactos B10 existentes corresponden a una versión anterior al patch semántico B8→B9: registran 446 features, mientras el B9 canónico actual registra 404. B10 es una demostración de SMOTE, no se usa aguas abajo y esta discrepancia no cambia B11/B12. Ejecutar el script B10 actual contra el B9 parcheado exigiría revisar ese contrato; aquí no se hizo.
+**B10 es una demostración de SMOTE y sus resultados no se usan en los pasos siguientes.** Sus archivos corresponden a una versión anterior de la codificación, con 446 columnas en lugar de las 404 de B9. Esto no afecta B11 ni B12, que trabajan con el train original.
 
 ## Lectura responsable de los resultados
 
@@ -75,11 +75,7 @@ Los archivos `.pkl` tampoco se versionan. Se regeneran ejecutando el pipeline en
 
 Mutual Information mide **asociación, no causalidad**. Las 13 componentes PCA resumen varianza del espacio codificado seleccionado; no son factores causales ni prueban rendimiento predictivo. No se informan métricas de performance porque no se entrenó un modelo.
 
-## Artefactos sin script generador visible
+## Material de entrega
 
-- `d1_mi_top10_*`: gráfico, labels y manifest del Top 10 MI para la entrega; no hay script generador en disco.
-- `b13_narrative_master.md`, `b13_pipeline_final.md`, `b13_key_numbers.csv` y `b13_test_boundary_ledger.csv`: consolidación documental; B13 no es un script ejecutable.
-
-## Publicación en GitHub
-
-La carpeta `_no_entrega/` contiene material ajeno preservado localmente y está excluida por `.gitignore`. El CSV, el cuestionario PDF y todos los pickles también quedan fuera de la publicación. Antes de publicar, corresponde verificar el permiso de redistribución del dataset y del cuestionario; ese permiso no se determina a partir del código del TP.
+- `d1_mi_top10_*`: gráfico del Top 10 de Información Mutua usado en la infografía, con etiquetas y manifest.
+- `b13_*`: narrativa, cifras clave, pipeline final y registro de la frontera train/test.

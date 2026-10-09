@@ -1,4 +1,4 @@
-﻿rank,feature,source_column,output_kind,is_discrete,mi_score,selected_top30,audit_status,notes
+﻿rank,feature,source_column,output_kind,is_discrete,mi_score,selected_top30,review_status,notes
 1,imc,B6:q4+B6:q5,continuous_numeric,False,0.00977376175440958,True,TRAIN_ONLY_MI_ASSOCIATION_NOT_CAUSATION,Mutual information ranks statistical association with the target in the training sample; it does not establish causality or independent effects.
 2,q50,q50,ordinal_numeric,True,0.00952134976869308,True,TRAIN_ONLY_MI_ASSOCIATION_NOT_CAUSATION,Mutual information ranks statistical association with the target in the training sample; it does not establish causality or independent effects.
 3,q61,q61,ordinal_numeric,True,0.00874132901372133,True,TRAIN_ONLY_MI_ASSOCIATION_NOT_CAUSATION,Mutual information ranks statistical association with the target in the training sample; it does not establish causality or independent effects.

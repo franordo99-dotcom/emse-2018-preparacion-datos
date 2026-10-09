@@ -551,7 +551,7 @@ def main() -> None:
     if not all(checks.values()):
         failed = [name for name, passed in checks.items() if not passed]
         raise AssertionError(f"B6 detenido; checks fallidos: {failed}")
-    print(f"Resultado: {sum(checks.values())}/{len(checks)} checks OK. B6 finalizado; no se ejecutó B7.")
+    print("B6 finalizado.")
 
 
 if __name__ == "__main__":

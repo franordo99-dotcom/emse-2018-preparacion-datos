@@ -20,7 +20,7 @@ sin_dato fijo                          │
 B7 SCALING TRAIN-ONLY                  │
 q4/q5                                  │
         ↓                              │
-B8 ENCODING PATCH TRAIN-ONLY           │
+B8 ENCODING TRAIN-ONLY                 │
 ordinal semántico + one-hot            │
 403 features                           │
         ↓                              │
@@ -40,7 +40,7 @@ B13 CONSOLIDACIÓN
 sin fit · sin transformación · sin modelo
 ```
 
-## Contrato de frontera
+## Frontera train/test
 
 - `B10_STATUS = SMOTE_DEMONSTRATION_ONLY`
 - `DOWNSTREAM_TRAIN_SOURCE = B9_ORIGINAL_TRAIN`

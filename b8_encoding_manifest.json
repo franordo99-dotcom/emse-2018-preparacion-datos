@@ -198,7 +198,7 @@
   "q50_included": true,
   "q51_included": true,
   "q50_q51_status": "SAME_DOMAIN_REVIEW_NOT_HARD_LEAKAGE",
-  "unknown_categorical_audit_status": "SEMANTIC_REVIEW_APPLIED",
+  "unknown_categorical_review_status": "SEMANTIC_REVIEW_APPLIED",
   "B10_STATUS": "SMOTE_DEMONSTRATION_ONLY",
   "DOWNSTREAM_TRAIN_SOURCE": "B9_ORIGINAL_TRAIN",
   "DOWNSTREAM_SMOTE_SOURCE_ALLOWED": false,

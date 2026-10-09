@@ -1,4 +1,4 @@
-﻿column,missing_n,missing_pct,proposed_mechanism,confidence,evidence,requires_human_review,feature_status,notes
+﻿column,missing_n,missing_pct,proposed_mechanism,confidence,evidence,requires_review,feature_status,notes
 qn40,55551,100.0,NO_IDENTIFICABLE,ALTA_EN_LIMITACION,"missing_n=55551, missing_pct=100%; ausencia total no identifica causa.",False,EXCLUIR_VACIO_INFORMATIVO,"100% faltante permite decidir inutilidad como feature, no el mecanismo."
 qn31,44480,80.07056578639448,NO_IDENTIFICABLE_POSIBLE_BRANCHING,MEDIA,Máscara no-aplicación de texto_q31: n=43438; missing qn31: n=44480; mismatches=1042; todos los no-aplicables faltan=True.,True,,ESTRUCTURAL_DEMOSTRADO exige igualdad exacta de máscaras; la co-ausencia por sí sola no prueba mecanismo.
 qn18,41543,74.78353224964447,NO_IDENTIFICABLE_POSIBLE_BRANCHING,MEDIA,Máscara no-aplicación de texto_q18: n=37497; missing qn18: n=41543; mismatches=4046; todos los no-aplicables faltan=True.,True,,ESTRUCTURAL_DEMOSTRADO exige igualdad exacta de máscaras; la co-ausencia por sí sola no prueba mecanismo.

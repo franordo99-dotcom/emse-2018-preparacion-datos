@@ -52,7 +52,7 @@ TEST_USED_FOR_FIT = False
 TEST_FROZEN_AFTER_B5 = True
 PATCH_REASON = "ORDINAL_SEMANTIC_REVIEW"
 PATCH_SOURCE = "REVISION_SEMANTICA_ORDINALES"
-AUDIT_STATUS = "SEMANTIC_REVIEW_APPLIED"
+REVIEW_STATUS = "SEMANTIC_REVIEW_APPLIED"
 IMC_SOURCE_FOR_B9 = "B6_IMPUTED_UNSCALED_Q4_Q5"
 Q50_Q51_STATUS = "SAME_DOMAIN_REVIEW_NOT_HARD_LEAKAGE"
 
@@ -306,7 +306,7 @@ def main() -> None:
         name: data["sha256"] for name, data in b7_manifest["output_files"].items()
     }
     if source_hashes != expected_hashes:
-        raise AssertionError("Hashes B7 inválidos; patch detenido.")
+        raise AssertionError("Hashes B7 inválidos; revisión semántica detenida.")
 
     X_train_b7 = pd.read_pickle(B7_X_TRAIN_PATH)
     X_test_b7 = pd.read_pickle(B7_X_TEST_PATH)
@@ -316,7 +316,7 @@ def main() -> None:
         previous_plan["action"].eq("ordinal_encode"), "column"
     ].tolist()
     if previous_ordinal_cols != PREVIOUS_ORDINAL_COLS:
-        raise AssertionError("Las ordinales previas no coinciden con el contrato de 41 variables.")
+        raise AssertionError("Las ordinales previas no coinciden con el criterio de 41 variables.")
 
     review_columns = PREVIOUS_ORDINAL_COLS + UNKNOWN_CATEGORICAL_COLS
     usecols = [item for column in review_columns for item in (column, f"texto_{column}")]
@@ -341,7 +341,7 @@ def main() -> None:
             "review_decision": "KEEP_ORDINAL",
             "reason": PREVIOUS_ORDINAL_REASONS[column],
             "new_encoding": "ORDINAL",
-            "audit_status": AUDIT_STATUS,
+            "review_status": REVIEW_STATUS,
         })
     for column in UNKNOWN_CATEGORICAL_COLS:
         config = UNKNOWN_SEMANTICS[column]
@@ -360,7 +360,7 @@ def main() -> None:
             ),
             "reason": config["reason"],
             "new_encoding": config["encoding"],
-            "audit_status": AUDIT_STATUS,
+            "review_status": REVIEW_STATUS,
         })
     ordinal_review = pd.DataFrame(review_rows)
     if ordinal_review["review_decision"].eq("REQUIRES_MANUAL_REVIEW").any():
@@ -384,7 +384,7 @@ def main() -> None:
             "escape_sentinel": (
                 ORDINAL_ESCAPE_SENTINEL if config["type"] == "ORDINAL" else ""
             ),
-            "audit_status": AUDIT_STATUS,
+            "review_status": REVIEW_STATUS,
         })
     unknown_proposals = pd.DataFrame(unknown_rows)
 
@@ -402,7 +402,7 @@ def main() -> None:
             action, output_kind, fit_required, fit_partition = (
                 "unchanged_scaled_continuous", "continuous_numeric", False, "NO_FIT"
             )
-            notes = "Escalada en B7; patch B8 no modifica valores"
+            notes = "Escalada en B7; revisión semántica B8 no modifica valores"
         elif column == INDICATOR_COL:
             action, output_kind, fit_required, fit_partition = (
                 "unchanged_binary_indicator", "binary_numeric", False, "NO_FIT"
@@ -413,7 +413,7 @@ def main() -> None:
                 "ordinal_encode", "ordinal_numeric", True, "train"
             )
             notes = (
-                f"Orden semántico auditado; sin_dato={ORDINAL_MISSING_SENTINEL}; "
+                f"Orden semántico revisado; sin_dato={ORDINAL_MISSING_SENTINEL}; "
                 f"escape={ORDINAL_ESCAPE_SENTINEL}; unseen={ORDINAL_UNKNOWN_SENTINEL}"
             )
         else:
@@ -575,7 +575,7 @@ def main() -> None:
         onehot_test,
     ], axis=1)
     if not X_train_b8.columns.is_unique or not X_test_b8.columns.is_unique:
-        raise AssertionError("Columnas B8 patch duplicadas.")
+        raise AssertionError("Columnas B8 revisión semántica duplicadas.")
 
     inventory_rows: list[dict[str, object]] = []
     for position, column in enumerate(CONTINUOUS_COLS + [INDICATOR_COL]):
@@ -586,7 +586,7 @@ def main() -> None:
             "output_kind": "continuous_numeric" if column in CONTINUOUS_COLS else "binary_numeric",
             "encoding": "unchanged_scaled_B7" if column in CONTINUOUS_COLS else "unchanged_indicator",
             "source_category": "",
-            "audit_status": "CONFIRMED",
+            "review_status": "CONFIRMED",
         })
     position = len(inventory_rows)
     for column in final_ordinal_cols:
@@ -597,7 +597,7 @@ def main() -> None:
             "output_kind": "ordinal_numeric",
             "encoding": "ordinal_semantic_mapping_patch",
             "source_category": "",
-            "audit_status": AUDIT_STATUS,
+            "review_status": REVIEW_STATUS,
         })
         position += 1
     vocab_by_output = onehot_vocabularies.set_index("output_column")
@@ -609,7 +609,7 @@ def main() -> None:
             "output_kind": "onehot_numeric",
             "encoding": "onehot_train_vocabulary",
             "source_category": vocab_by_output.loc[output_column, "category"],
-            "audit_status": AUDIT_STATUS,
+            "review_status": REVIEW_STATUS,
         })
         position += 1
     feature_inventory = pd.DataFrame(inventory_rows)
@@ -698,7 +698,7 @@ def main() -> None:
             "q50_included": True,
             "q51_included": True,
             "q50_q51_status": Q50_Q51_STATUS,
-            "unknown_categorical_audit_status": AUDIT_STATUS,
+            "unknown_categorical_review_status": REVIEW_STATUS,
             "B10_STATUS": "SMOTE_DEMONSTRATION_ONLY",
             "DOWNSTREAM_TRAIN_SOURCE": "B9_ORIGINAL_TRAIN",
             "DOWNSTREAM_SMOTE_SOURCE_ALLOWED": False,
@@ -732,7 +732,7 @@ def main() -> None:
             "y_intacto": y_train_b7.equals(pd.read_pickle(staged[Y_TRAIN_PATH.name]))
             and y_test_b7.equals(pd.read_pickle(staged[Y_TEST_PATH.name])),
             "test_frozen": b7_manifest["TEST_FROZEN_AFTER_B5"] is True,
-            "ordinales_previas_41_auditadas": len(review_previous) == 41
+            "ordinales_previas_41_revisadas": len(review_previous) == 41
             and set(review_previous["column"]) == set(PREVIOUS_ORDINAL_COLS),
             "cada_ordinal_tiene_labels": review_previous["response_labels"].str.len().gt(2).all(),
             "cada_ordinal_tiene_decision": review_previous["review_decision"].isin([
@@ -785,11 +785,11 @@ def main() -> None:
             "sin_feature_selection": not OPERATION_FLAGS["feature_selection"],
             "sin_PCA": not OPERATION_FLAGS["pca"],
             "sin_modelo": not OPERATION_FLAGS["model"],
-            "artefactos_staging_persistidos": all(path.exists() for path in staged.values()),
+            "artefactos_temporal_persistidos": all(path.exists() for path in staged.values()),
         }
         if not all(checks.values()):
             failed = [name for name, passed in checks.items() if not passed]
-            raise AssertionError(f"B8 patch detenido antes de promover: {failed}")
+            raise AssertionError(f"B8 revisión semántica detenida antes de reemplazar: {failed}")
 
         destinations = {
             REVIEW_PATH.name: REVIEW_PATH,
@@ -821,16 +821,16 @@ def main() -> None:
         }
         if not all(promotion_checks.values()):
             failed = [name for name, passed in promotion_checks.items() if not passed]
-            raise AssertionError(f"Promoción B8 patch inválida: {failed}")
+            raise AssertionError(f"Reemplazo B8 tras revisión semántica inválido: {failed}")
 
     print("=== REVISIÓN SEMÁNTICA B8 ===")
-    print(f"Ordinales previas auditadas: {len(PREVIOUS_ORDINAL_COLS)}")
+    print(f"Ordinales previas revisadas: {len(PREVIOUS_ORDINAL_COLS)}")
     print("Ordinal→nominal: ninguna")
     print(f"Nominal→ordinal: {UNKNOWN_TO_ORDINAL}")
     print(f"Nominal sin cambio: {UNKNOWN_KEEP_NOMINAL}")
     print(ordinal_review[["column", "semantic_structure", "review_decision", "new_encoding"]].to_string(index=False))
 
-    print("\n=== B8 PATCH: TIPOS Y SALIDA ===")
+    print("\n=== B8 REVISIÓN SEMÁNTICA: TIPOS Y SALIDA ===")
     print("Antes: ordinales=41; one-hot inputs=105; output features=445")
     print(f"Después: ordinales={len(final_ordinal_cols)}; one-hot inputs={len(onehot_cols)}; one-hot outputs={onehot_train.shape[1]}")
     print(f"X_train_b8: {X_train_b8.shape}")
@@ -843,15 +843,15 @@ def main() -> None:
     print("TRANSFORM encoders: TRAIN + TEST")
     print("TEST_USED_FOR_FIT = False")
 
-    print("\n=== CHECKS B8 PATCH ===")
+    print("\n=== CHECKS B8 REVISIÓN SEMÁNTICA ===")
     for name, passed in checks.items():
         print(f"[{'OK' if passed else 'FALLA'}] {name}")
     for name, passed in promotion_checks.items():
         print(f"[{'OK' if passed else 'FALLA'}] promotion_{name}")
-    print(f"Resultado: {sum(checks.values())}/{len(checks)} checks B8 OK; promoción {sum(promotion_checks.values())}/{len(promotion_checks)} OK.")
+    print(f"Resultado: {sum(checks.values())}/{len(checks)} checks B8 OK; reemplazo {sum(promotion_checks.values())}/{len(promotion_checks)} OK.")
     print(f"PATCH_REASON = {PATCH_REASON}")
     print(f"PATCH_SOURCE = {PATCH_SOURCE}")
-    print("B8 patch promovido a artefactos canónicos; no se ejecutó B9 dentro de este script.")
+    print("B8 finalizado.")
 
 
 if __name__ == "__main__":

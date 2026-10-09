@@ -509,7 +509,7 @@ def main() -> None:
     case_review["flag_count"] = case_review[flag_columns].sum(axis=1).astype(int)
     case_review["review_class"] = np.where(
         case_review["error_demostrado"],
-        "REQUIERE_REVISION_HUMANA",
+        "REQUIERE_REVISION",
         "VALOR_EXTREMO_NO_ERROR_DEMOSTRADO",
     )
     case_review["evidence"] = np.select(
@@ -712,7 +712,7 @@ def main() -> None:
     if not all(checks.values()):
         failed = [name for name, passed in checks.items() if not passed]
         raise AssertionError(f"B4 detenido; checks fallidos: {failed}")
-    print(f"Resultado: {sum(checks.values())}/{len(checks)} checks OK. B4 finalizado; no se ejecutó B5.")
+    print("B4 finalizado.")
 
 
 if __name__ == "__main__":

@@ -104,7 +104,7 @@ def verify_source_hashes(manifest: dict[str, object]) -> dict[str, str]:
     }
     if actual != expected:
         raise AssertionError(
-            f"Hashes B9 patch inválidos; B11 detenido. actual={actual}, expected={expected}"
+            f"Hashes B9 revisión semántica inválidos; B11 detenido. actual={actual}, expected={expected}"
         )
     return actual
 
@@ -160,7 +160,7 @@ def main() -> None:
             == EXPECTED_INPUT_FEATURE_N
             == int(manifest_b9["output_feature_n"])
         ),
-        "hashes B9 patch verificados": bool(source_hashes) and patch_verified,
+        "hashes B9 revisión semántica verificados": bool(source_hashes) and patch_verified,
         "X/y train alineados": X_train_b9.index.equals(y_train_b9.index),
         "X/y test alineados": X_test_b9.index.equals(y_test_b9.index),
         "train/test disjuntos": X_train_b9.index.intersection(X_test_b9.index).empty,
@@ -171,7 +171,7 @@ def main() -> None:
     }
     failed = [name for name, passed in source_checks.items() if not passed]
     if failed:
-        raise AssertionError(f"Fuente B9 patch inválida; B11 detenido: {failed}")
+        raise AssertionError(f"Fuente B9 revisión semántica inválida; B11 detenido: {failed}")
 
     integrity_checks = {
         "numeric only": all(is_numeric_dtype(dtype) for dtype in X_train_b9.dtypes)
@@ -272,7 +272,7 @@ def main() -> None:
     )
     ranking.insert(0, "rank", np.arange(1, len(ranking) + 1, dtype=int))
     ranking["selected_top30"] = ranking["rank"].le(TOP_K)
-    ranking["audit_status"] = "TRAIN_ONLY_MI_ASSOCIATION_NOT_CAUSATION"
+    ranking["review_status"] = "TRAIN_ONLY_MI_ASSOCIATION_NOT_CAUSATION"
     ranking["notes"] = INTERPRETATION_CONTRACT
 
     selected = ranking.loc[
@@ -625,6 +625,7 @@ def main() -> None:
     for number, (name, passed) in enumerate(checks.items(), start=1):
         print(f"CHECK {number:02d} [{'OK' if passed else 'FAIL'}] {name}")
     print(f"CHECKS B11: {sum(checks.values())}/{len(checks)} OK")
+    print("B11 finalizado.")
 
 
 if __name__ == "__main__":

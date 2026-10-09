@@ -376,6 +376,7 @@ def main() -> None:
     failed = [name for name, passed in checks.items() if not passed]
     if failed:
         raise AssertionError(f"B1 detenido; checks fallidos: {failed}")
+    print("B1 finalizado.")
 
 
 if __name__ == "__main__":

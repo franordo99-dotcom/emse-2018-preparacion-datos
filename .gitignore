@@ -8,7 +8,7 @@ venv/
 .env
 .env.*
 !.env.example
-_no_entrega/
+_local/
 EMSE_DatosAbiertos.csv
 cuestionario-emse-2018.pdf
 *.pkl

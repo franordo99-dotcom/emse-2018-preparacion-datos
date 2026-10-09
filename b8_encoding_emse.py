@@ -49,7 +49,7 @@ TEST_FROZEN_AFTER_B5 = True
 DISCRETIZATION_B8 = "NONE"
 IMC_SOURCE_FOR_B9 = "B6_IMPUTED_UNSCALED_Q4_Q5"
 Q50_Q51_STATUS = "SAME_DOMAIN_REVIEW_NOT_HARD_LEAKAGE"
-UNKNOWN_AUDIT_STATUS = "PENDIENTE_REVISION_SEMANTICA"
+UNKNOWN_REVIEW_STATUS = "PENDIENTE_REVISION_SEMANTICA"
 
 UNKNOWN_CATEGORICAL_COLS = [
     "q28",
@@ -254,7 +254,7 @@ def main() -> None:
                 "confidence": "MEDIA",
                 "reason": reason,
                 "encoding_to_execute": "ONE_HOT",
-                "audit_status": UNKNOWN_AUDIT_STATUS,
+                "review_status": UNKNOWN_REVIEW_STATUS,
             }
         )
     unknown_proposals = pd.DataFrame(unknown_rows)
@@ -298,7 +298,7 @@ def main() -> None:
             if column in {"q50", "q51"}:
                 notes += f"; {Q50_Q51_STATUS}; pendiente de revisión semántica"
             if column in UNKNOWN_CATEGORICAL_COLS:
-                notes += f"; propuesta NOMINAL; {UNKNOWN_AUDIT_STATUS}"
+                notes += f"; propuesta NOMINAL; {UNKNOWN_REVIEW_STATUS}"
         plan_rows.append(
             {
                 "column": column,
@@ -486,7 +486,7 @@ def main() -> None:
                 "output_kind": "continuous_numeric",
                 "encoding": "unchanged_scaled_B7",
                 "source_category": "",
-                "audit_status": "CONFIRMED",
+                "review_status": "CONFIRMED",
             }
         )
         output_position += 1
@@ -498,7 +498,7 @@ def main() -> None:
             "output_kind": "binary_numeric",
             "encoding": "unchanged_indicator",
             "source_category": "",
-            "audit_status": "CONFIRMED",
+            "review_status": "CONFIRMED",
         }
     )
     output_position += 1
@@ -511,7 +511,7 @@ def main() -> None:
                 "output_kind": "ordinal_numeric",
                 "encoding": "ordinal_train_mapping",
                 "source_category": "",
-                "audit_status": (
+                "review_status": (
                     "PENDIENTE_REVISION_SEMANTICA"
                     if column in {"q50", "q51"}
                     else "B2_ORDINAL"
@@ -530,8 +530,8 @@ def main() -> None:
                 "output_kind": "onehot_numeric",
                 "encoding": "onehot_train_vocabulary",
                 "source_category": vocab_by_output.loc[output_column, "category"],
-                "audit_status": (
-                    UNKNOWN_AUDIT_STATUS
+                "review_status": (
+                    UNKNOWN_REVIEW_STATUS
                     if source_column in UNKNOWN_CATEGORICAL_COLS
                     else "B2_NOMINAL_OR_BINARY"
                 ),
@@ -643,7 +643,7 @@ def main() -> None:
         "q50_included": True,
         "q51_included": True,
         "q50_q51_status": Q50_Q51_STATUS,
-        "unknown_categorical_audit_status": UNKNOWN_AUDIT_STATUS,
+        "unknown_categorical_review_status": UNKNOWN_REVIEW_STATUS,
         "output_files": {
             path.name: {"sha256": file_sha256(path), "bytes": path.stat().st_size}
             for path in output_paths
@@ -700,8 +700,8 @@ def main() -> None:
         "unknown_11_propuesta_y_razon": len(unknown_proposals) == 11
         and unknown_proposals["proposed_type"].isin(["ORDINAL", "NOMINAL"]).all()
         and unknown_proposals["reason"].str.len().gt(0).all(),
-        "unknown_11_pendiente_auditoria": unknown_proposals["audit_status"]
-        .eq(UNKNOWN_AUDIT_STATUS)
+        "unknown_11_pendiente_auditoria": unknown_proposals["review_status"]
+        .eq(UNKNOWN_REVIEW_STATUS)
         .all(),
         "sin_dato_preservado_encoding": train_encoded_sin_dato
         == train_input_sin_dato
@@ -779,7 +779,7 @@ def main() -> None:
         "hashes_fuente_B7_verificados": source_hashes == expected_source_hashes,
     }
 
-    print("=== FRONTERA B7 CANÓNICA ===")
+    print("=== FRONTERA B7 FINAL ===")
     print(f"Train: {len(X_train_b7)}")
     print(f"Test: {len(X_test_b7)}")
     print(f"Features entrada: {X_train_b7.shape[1]}")
@@ -805,7 +805,7 @@ def main() -> None:
                 "confidence",
                 "reason",
                 "encoding_to_execute",
-                "audit_status",
+                "review_status",
             ]
         ].to_string(index=False)
     )
@@ -885,7 +885,7 @@ def main() -> None:
     if not all(checks.values()):
         failed = [name for name, passed in checks.items() if not passed]
         raise AssertionError(f"B8 detenido; checks fallidos: {failed}")
-    print(f"Resultado: {sum(checks.values())}/{len(checks)} checks OK. B8 finalizado; no se ejecutó B9.")
+    print("B8 finalizado.")
 
 
 if __name__ == "__main__":

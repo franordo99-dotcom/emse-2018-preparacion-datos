@@ -241,7 +241,7 @@ def build_data_dictionary(df: pd.DataFrame) -> pd.DataFrame:
             role = "continuous_feature"
             statistical_type = "continuous"
             confidence = "ALTA"
-            basis = "semántica confirmada en contrato B0 y dominio numérico continuo"
+            basis = "semántica confirmada en criterio B0 y dominio numérico continuo"
             notes.append("altura en metros" if column == "q4" else "peso en kg")
         elif column == "record":
             role = "identifier"
@@ -1013,6 +1013,7 @@ def main() -> None:
     failed = [name for name, passed in checks.items() if not passed]
     if failed:
         raise AssertionError(f"B2 detenido; checks fallidos: {failed}")
+    print("B2 finalizado.")
 
 
 if __name__ == "__main__":

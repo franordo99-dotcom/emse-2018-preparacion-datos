@@ -770,6 +770,7 @@ def main() -> None:
     for number, (name, passed) in enumerate(checks.items(), start=1):
         print(f"CHECK {number:02d} [{'OK' if passed else 'FAIL'}] {name}")
     print(f"CHECKS B12: {sum(checks.values())}/{len(checks)} OK")
+    print("B12 finalizado.")
 
 
 if __name__ == "__main__":

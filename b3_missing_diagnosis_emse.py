@@ -352,7 +352,7 @@ def build_diagnosis(
                 "proposed_mechanism": mechanism,
                 "confidence": confidence,
                 "evidence": evidence,
-                "requires_human_review": review,
+                "requires_review": review,
                 "feature_status": feature_status,
                 "notes": notes,
             }
@@ -787,13 +787,13 @@ def main() -> None:
         print("Tasas missing q4/q5:")
         print(demographic_tables[row.concept].to_string(index=False, float_format=lambda value: f"{value:.4f}"))
 
-    print("\n=== EVIDENCIA q4/q5 Y DECISION HUMANA ===")
+    print("\n=== EVIDENCIA q4/q5 Y CRITERIO ADOPTADO ===")
     print(evidence_summary.to_string(index=False, float_format=lambda value: f"{value:.4f}"))
     print(f"Umbral descriptivo de materialidad: {MATERIAL_RANGE_PP:.1f} pp")
     print(f"Fuentes con rango material: {material_sources}")
     print(f"DECISION_INICIAL = {MISSING_DIAGNOSIS_POLICY['q4_q5_initial_hypothesis']}")
     print(f"RESULTADO_EMPIRICO = {q4_q5_result}")
-    print(f"REQUIERE_REVISION_HUMANA = {'SI' if q4_q5_requires_review else 'NO'}")
+    print(f"REQUIERE_REVISION = {'SI' if q4_q5_requires_review else 'NO'}")
     print(f"RESERVA = {MISSING_DIAGNOSIS_POLICY['q4_q5_reserve']}")
 
     print("\n=== BRANCHING: CANDIDATOS PRIORITARIOS / >=40% ===")
@@ -834,7 +834,7 @@ def main() -> None:
     if not all(checks.values()):
         failed = [name for name, passed in checks.items() if not passed]
         raise AssertionError(f"B3 detenido; checks fallidos: {failed}")
-    print(f"Resultado: {sum(checks.values())}/{len(checks)} checks OK. B3 finalizado; no se ejecutó B4.")
+    print("B3 finalizado.")
 
 
 if __name__ == "__main__":

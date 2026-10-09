@@ -28,7 +28,7 @@ B4 comparó IQR, ±3 desvíos y banderas descriptivas de dominio. Como esos crit
 
 ### Frontera y transformaciones
 
-El split ocurrió antes de todo aprendizaje de parámetros. B7 ajustó `StandardScaler` de `q4/q5` sólo en train. B8 aprendió vocabularios one-hot y mappings ordinales sólo en train y luego aplicó el patch semántico que dejó 403 features. B9 calculó IMC mediante una regla fija usando `q4/q5` imputados pero no escalados de B6, ajustó su scaler sólo en train y produjo 404 features.
+El split ocurrió antes de todo aprendizaje de parámetros. B7 ajustó `StandardScaler` de `q4/q5` sólo en train. B8 aprendió vocabularios one-hot y mappings ordinales sólo en train y luego aplicó la revisión semántica que dejó 403 features. B9 calculó IMC mediante una regla fija usando `q4/q5` imputados pero no escalados de B6, ajustó su scaler sólo en train y produjo 404 features.
 
 ### SMOTE
 
@@ -36,7 +36,7 @@ B10 ejecutó SMOTE sólo sobre train como demostración técnica y generó 17.94
 
 ## 4. Selección B11
 
-B11 calculó Mutual Information exclusivamente sobre las 44.440 observaciones originales de train, con una máscara que distinguió 3 continuas de 401 dimensiones discretas. La regla de retención fue fijada previamente por Francisco: **Top 30 columnas**, reduciendo 404 a 30 dimensiones, una reducción de 92,5743%.
+B11 calculó Mutual Information exclusivamente sobre las 44.440 observaciones originales de train, con una máscara que distinguió 3 continuas de 401 dimensiones discretas. La regla de retención fue fijada antes de ver el ranking: **Top 30 columnas**, reduciendo 404 a 30 dimensiones, una reducción de 92,5743%.
 
 Las primeras posiciones fueron `imc`, `q50`, `q61`, `q2__1` y `q2__2`. `q50` quedó rank 2 y `q51` rank 17; ambas permanecen como `SAME_DOMAIN_REVIEW_NOT_HARD_LEAKAGE`. MI mide **asociación individual con el target en train**, no causalidad, efecto independiente ni importancia causal. Varias dummies de una misma pregunta pueden aparecer simultáneamente porque la selección oficial opera sobre columnas codificadas individuales.
 

@@ -193,7 +193,7 @@ def main() -> None:
         f"{max_other_unique}, columnas={max_other_unique_cols}"
     )
     print(
-        "Contrato conceptual B0: dtype fisico de pandas != tipo estadistico; "
+        "Criterio conceptual B0: dtype fisico de pandas != tipo estadistico; "
         "todo lo sustantivo restante queda como categorico inicial."
     )
 
@@ -274,6 +274,7 @@ def main() -> None:
     for name, passed in checks.items():
         print(f"{name}: {'OK' if passed else 'FALLO'}")
     print(f"Resultado: {len(checks)}/{len(checks)} checks OK")
+    print("B0 finalizado.")
 
 
 if __name__ == "__main__":
