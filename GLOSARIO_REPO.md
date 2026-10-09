@@ -65,7 +65,7 @@ emse-2018-preparacion-datos/
 - **QUÉ HACE:** calcula un IMC exclusivamente diagnóstico a partir de `q4`/`q5`, banderas IQR, ±3 desvíos y reglas de revisión de dominio. Compara métodos, inspecciona casos, tasas por target y coherencia numérica; conserva los valores sin modificarlos.
 - **ENTRADAS:** `EMSE_DatosAbiertos.csv`; funciones de B0/B1.
 - **SALIDAS:** `b4_outliers_iqr.csv`, `b4_outliers_z3.csv`, `b4_domain_review_flags.csv`, `b4_outlier_method_overlap.csv`, `b4_outlier_case_review.csv`, `b4_outlier_summary.csv`, `b4_outlier_flags_by_target.csv`, `b4_coherence_checks.csv`; 9 PNG en `outputs/b4_figures/`.
-- **CHECKS:** shape/universo; `q4`/`q5` y faltantes preservados; IMC sólo en pares completos y cálculo coherente; ninguna imputación, eliminación, modificación, partición, transformación, selección o modelo; política `RETENER_Y_MARCAR_SIN_MODIFICAR`; errores demostrados con evidencia o conteo cero; artefactos existentes.
+- **CHECKS:** shape/universo; `q4`/`q5` y faltantes preservados; IMC sólo en pares completos y cálculo coherente; ninguna imputación, eliminación, modificación, partición, transformación, selección o modelo; política de retener y marcar sin modificar; errores demostrados con evidencia o conteo cero; artefactos existentes.
 
 ### B5 — Split y frontera de evaluación
 
@@ -119,9 +119,9 @@ emse-2018-preparacion-datos/
 - **QUÉ HACE:** carga B9 y aplica `imblearn.over_sampling.SMOTE` sólo al train con estrategia `auto`, semilla 42 y 5 vecinos. Copia test byte por byte, distingue filas originales/sintéticas y documenta coordenadas fraccionarias que SMOTE puede introducir en el espacio one-hot/ordinal.
 - **ENTRADAS:** `b9_feature_engineering_manifest.json`, `b9_feature_inventory.csv`, `b9_X_train.pkl`, `b9_X_test.pkl`, `b9_y_train.pkl`, `b9_y_test.pkl`.
 - **SALIDAS:** `b10_class_distribution.csv`, `b10_sample_origin.csv`, `b10_smote_summary.csv`, `b10_smote_categorical_interpolation_diagnostic.csv`, `b10_feature_inventory.csv`, `b10_smote_manifest.json`, `b10_X_train_smote.pkl`, `b10_y_train_smote.pkl`, `b10_X_test.pkl`, `b10_y_test.pkl`.
-- **CHECKS:** hashes/alineación y espacio de 446 columnas esperado por el script; SMOTE/configuración/train-only y clases finales balanceadas; test idéntico por hash, datos, índices y prevalencia; observaciones originales sin alteración y sintéticas identificables; ausencia de nuevas features y de operaciones posteriores; diagnóstico one-hot/ordinal/indicador; persistencia. **Estos artefactos son `SMOTE_DEMONSTRATION_ONLY` y no alimentan B11/B12.**
+- **CHECKS:** hashes/alineación y espacio de 446 columnas esperado por el script; SMOTE/configuración/train-only y clases finales balanceadas; test idéntico por hash, datos, índices y prevalencia; observaciones originales sin alteración y sintéticas identificables; ausencia de nuevas features y de operaciones posteriores; diagnóstico one-hot/ordinal/indicador; persistencia. **Estos artefactos son solo demostración y no alimentan B11/B12.**
 
-### B11 — Selección por Mutual Information
+### B11 — Selección por Información Mutua
 
 - **ETAPA:** B11 — Feature selection MI Top 30.
 - **SCRIPT(S):** `b11_mutual_information_selection_emse.py`.
@@ -323,7 +323,7 @@ B9 b9_feature_engineering_emse.py
     │            B13 consolidación documental de resultados
     │
     └──► B10 b10_smote_emse.py
-         └── RAMA LATERAL: SMOTE_DEMONSTRATION_ONLY
+         └── RAMA LATERAL: solo demostración
              Sus matrices NO son usadas por B11, B12 ni B13.
 ```
 

@@ -8,7 +8,7 @@ TARGET desde semántica q49
 55.551 casos observados · 29,8068% positivos
         ↓
 EDA / MISSING / OUTLIERS
-B2 descripción · B3 MAR_HIPOTESIS_RESPALDADA · B4 retener y marcar
+B2 descripción · B3 hipótesis MAR respaldada · B4 retener y marcar
         ↓
 B5 SPLIT INDIVIDUAL ESTRATIFICADO
 TRAIN ORIGINAL 44.440          TEST CONGELADO 11.111
@@ -30,7 +30,7 @@ B9 IMC FÍSICO + SCALER TRAIN-ONLY      │
         │                                             │
         │ LÍNEA PRINCIPAL                             │ RAMA LATERAL
         ↓                                             └── B10 SMOTE
-B11 MUTUAL INFORMATION TOP 30                            DEMONSTRATION ONLY
+B11 Información Mutua Top 30                            DEMONSTRATION ONLY
 404 → 30                                                 17.948 sintéticos
         ↓                                                 NO DOWNSTREAM
 B12 PCA TRAIN-ONLY
@@ -42,7 +42,7 @@ sin fit · sin transformación · sin modelo
 
 ## Frontera train/test
 
-- `B10_STATUS = SMOTE_DEMONSTRATION_ONLY`
+- B10: solo demostración.
 - `DOWNSTREAM_TRAIN_SOURCE = B9_ORIGINAL_TRAIN`
 - `DOWNSTREAM_TRAIN_N = 44440`
 - `DOWNSTREAM_SMOTE_SOURCE_ALLOWED = False`

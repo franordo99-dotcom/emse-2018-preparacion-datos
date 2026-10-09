@@ -1,6 +1,17 @@
 # TP Integrador — Análisis de Datos (CEIA/FIUBA) · EMSE 2018
 
-Este trabajo prepara datos de la Encuesta Mundial de Salud Escolar (EMSE) 2018 para una clasificación binaria supervisada: cumplimiento de la recomendación de actividad física de al menos cinco días semanales con ≥60 minutos diarios, derivado de `q49`. Recorre carga, diagnóstico, partición, transformaciones, selección por Mutual Information y PCA. **No se entrena ningún modelo:** la consigna no lo requiere.
+**Autor:** Francisco Ordóñez · Especialización en Inteligencia Artificial (CEIA), FIUBA · 2026
+
+Este trabajo prepara datos de la Encuesta Mundial de Salud Escolar (EMSE) 2018 para una clasificación binaria supervisada: cumplimiento de la recomendación de actividad física de al menos cinco días semanales con ≥60 minutos diarios, derivado de `q49`. Recorre carga, diagnóstico, partición, transformaciones, selección por Información Mutua y PCA. **No se entrena ningún modelo:** la consigna no lo requiere.
+
+## Por dónde empezar
+
+1. [Este README](README.md): problema, pipeline y cómo reproducir.
+2. [b13_narrative_master.md](b13_narrative_master.md): el análisis completo y sus conclusiones.
+3. [outputs/](outputs/): gráficos del EDA (b2), de faltantes (b3) y de outliers (b4).
+4. [b11_mutual_information_ranking.csv](b11_mutual_information_ranking.csv): ranking de asociación con el target.
+5. [b12_pca_explained_variance.csv](b12_pca_explained_variance.csv) y [b12_scree_plot.png](b12_scree_plot.png): resultado del PCA.
+6. [GLOSARIO_REPO.md](GLOSARIO_REPO.md): entradas, salidas y controles de cada bloque.
 
 ## Variables clave
 
@@ -33,10 +44,10 @@ Para entradas, salidas y checks de cada bloque, consultar [GLOSARIO_REPO.md](GLO
 
 ## Cómo reproducir la rama principal
 
-Colocar `EMSE_DatosAbiertos.csv` en la raíz. Se requieren Python y `pandas`, `numpy`, `scikit-learn`, `imbalanced-learn` y `matplotlib`; el repositorio no fija versiones. Una instalación posible es:
+Colocar `EMSE_DatosAbiertos.csv` en la raíz. Se requieren Python y `pandas`, `numpy`, `scikit-learn`, `imbalanced-learn` y `matplotlib`, con las versiones registradas en [requirements.txt](requirements.txt). Para instalarlas:
 
 ```bash
-python -m pip install pandas numpy scikit-learn imbalanced-learn matplotlib
+python -m pip install -r requirements.txt
 ```
 
 Desde la raíz, en una copia de trabajo si se desea conservar intactos los artefactos publicados, ejecutar en este orden. Los scripts B2–B12 escriben archivos con los nombres ya presentes.
@@ -67,13 +78,20 @@ Los archivos `.pkl` tampoco se versionan. Se regeneran ejecutando el pipeline en
 
 **B10 es una demostración de SMOTE y sus resultados no se usan en los pasos siguientes.** Sus archivos corresponden a una versión anterior de la codificación, con 446 columnas en lugar de las 404 de B9. Esto no afecta B11 ni B12, que trabajan con el train original.
 
+## Resultados principales
+
+- 55.551 estudiantes con target; cumple la recomendación el 29,8%.
+- Un 36,4% no informó peso ni altura, siempre juntos; falta el 39,0% entre quienes no cumplen y el 30,2% entre quienes cumplen. Se trabajó bajo hipótesis MAR: mediana de train más un indicador de faltante.
+- El encoding llevó el espacio de 149 a 404 columnas; la selección retuvo 30 y el PCA 13 componentes (90,77% de la varianza de train).
+- Las asociaciones son débiles: IMC 0,0098, transporte activo a la escuela (q50) 0,0095 y clases de educación física (q61) 0,0087, sobre un máximo posible de 0,61 nats.
+
 ## Lectura responsable de los resultados
 
 - Todas las cifras son crudas, sin ponderar por el diseño muestral de la encuesta.
 - SMOTE (B10) es una rama demostrativa, no usada aguas abajo.
 - Las asociaciones individuales medidas son débiles; ninguna variable predice el target por sí sola.
 
-Mutual Information mide **asociación, no causalidad**. Las 13 componentes PCA resumen varianza del espacio codificado seleccionado; no son factores causales ni prueban rendimiento predictivo. No se informan métricas de performance porque no se entrenó un modelo.
+Información Mutua mide **asociación, no causalidad**. Las 13 componentes PCA resumen varianza del espacio codificado seleccionado; no son factores causales ni prueban rendimiento predictivo. No se informan métricas de performance porque no se entrenó un modelo.
 
 ## Material de entrega
 
