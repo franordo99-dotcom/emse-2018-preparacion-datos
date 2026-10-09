@@ -68,7 +68,7 @@ HARD_LEAKAGE_COLS = {
 METADATA_COLS = {"record", "psu", "stratum", "weight", "sitio"}
 TARGET_COL = "target_pa_oms5"
 
-# ponytail: these flags make the B11-only boundary directly auditable.
+# Banderas de estado: documentan qué operaciones hace B11 y cuáles no.
 OPERATION_FLAGS = {
     "new_split": False,
     "imputation": False,

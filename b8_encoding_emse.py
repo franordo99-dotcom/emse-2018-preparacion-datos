@@ -700,7 +700,7 @@ def main() -> None:
         "unknown_11_propuesta_y_razon": len(unknown_proposals) == 11
         and unknown_proposals["proposed_type"].isin(["ORDINAL", "NOMINAL"]).all()
         and unknown_proposals["reason"].str.len().gt(0).all(),
-        "unknown_11_pendiente_auditoria": unknown_proposals["review_status"]
+        "unknown_11_pendiente_revision": unknown_proposals["review_status"]
         .eq(UNKNOWN_REVIEW_STATUS)
         .all(),
         "sin_dato_preservado_encoding": train_encoded_sin_dato
