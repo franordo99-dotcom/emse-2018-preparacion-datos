@@ -17,7 +17,8 @@ Este trabajo prepara datos de la Encuesta Mundial de Salud Escolar (EMSE) 2018 p
 
 - q49 = días de actividad física de ≥60 min en la última semana (fuente del target).
 - q50 = transporte activo: días que fue caminando o en bici a la escuela (feature, no target).
-- q61 = días de clase de educación física en la escuela (feature).
+- q61 = frecuencia de consumo de frutas en los últimos 7 días (feature).
+- q51 = días de clase de educación física por semana (feature).
 
 El target `target_pa_oms5` se construye desde el código **y la etiqueta de respuesta** de `q49`, no desde su número de código aislado. `q49` y sus proxies directos quedan fuera de las features. `q50` y `q51` son del mismo dominio, pero no forman parte de la definición del target.
 
@@ -83,7 +84,7 @@ Los archivos `.pkl` tampoco se versionan. Se regeneran ejecutando el pipeline en
 - 55.551 estudiantes con target; cumple la recomendación el 29,8%.
 - Un 36,4% no informó peso ni altura, siempre juntos; falta el 39,0% entre quienes no cumplen y el 30,2% entre quienes cumplen. Se trabajó bajo hipótesis MAR: mediana de train más un indicador de faltante.
 - El encoding llevó el espacio de 149 a 404 columnas; la selección retuvo 30 y el PCA 13 componentes (90,77% de la varianza de train).
-- Las asociaciones son débiles: IMC 0,0098, transporte activo a la escuela (q50) 0,0095 y clases de educación física (q61) 0,0087, sobre un máximo posible de 0,61 nats.
+- Las asociaciones son débiles: IMC 0,0098, transporte activo a la escuela (q50) 0,0095 y consumo de frutas (q61) 0,0087, sobre un máximo posible de 0,61 nats.
 
 ## Lectura responsable de los resultados
 

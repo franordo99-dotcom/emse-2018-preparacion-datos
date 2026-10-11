@@ -1,6 +1,6 @@
 rank,feature,source_column,mi_score,display_label,label_source,interpretation_note
 1,imc,B6:q4+B6:q5,0.00977376175440958,IMC,b11_feature_inventory.csv,"Índice derivado de peso y altura; asociación individual, no causalidad."
-2,q50,q50,0.00952134976869308,Días de actividad física (q50),b2_data_dictionary.csv,"Dominio vecino del target; q50 no interviene en la definición del target basada en q49."
+2,q50,q50,0.00952134976869308,Caminar o ir en bici a la escuela (q50),b2_data_dictionary.csv,"Dominio vecino del target; q50 no interviene en la definición del target basada en q49."
 3,q61,q61,0.00874132901372133,Frecuencia de consumo de frutas (q61),b2_data_dictionary.csv,"Escala observada desde ausencia de consumo hasta cuatro o más veces por día."
 4,q2__1,q2,0.00825536882335445,Sexo: masculino (q2),"b11_feature_inventory.csv + b2_data_dictionary.csv","Categoría 1 del bloque one-hot q2; etiqueta trazada al par q2/texto_q2."
 5,q2__2,q2,0.00821664500701344,Sexo: femenino (q2),"b11_feature_inventory.csv + b2_data_dictionary.csv","Categoría 2 del bloque one-hot q2; etiqueta trazada al par q2/texto_q2."

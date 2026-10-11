@@ -706,7 +706,7 @@ z
     <g id="ytick_2">
      <g id="line2d_14"/>
      <g id="text_9">
-      <!-- 2. Días de actividad física (q50) -->
+      <!-- 2. Caminar o ir en bici a la escuela (q50) -->
       <g style="fill: #252a30" transform="translate(243.017188 201.395322) scale(0.11 -0.11)">
        <defs>
         <path id="DejaVuSans-44" d="M 1259 4147 
@@ -1023,39 +1023,7 @@ Q 928 4138 513 4856
 z
 " transform="scale(0.015625)"/>
        </defs>
-       <use xlink:href="#DejaVuSans-32"/>
-       <use xlink:href="#DejaVuSans-2e" x="63.623047"/>
-       <use xlink:href="#DejaVuSans-20" x="95.410156"/>
-       <use xlink:href="#DejaVuSans-44" x="127.197266"/>
-       <use xlink:href="#DejaVuSans-ed" x="204.199219"/>
-       <use xlink:href="#DejaVuSans-61" x="231.982422"/>
-       <use xlink:href="#DejaVuSans-73" x="293.261719"/>
-       <use xlink:href="#DejaVuSans-20" x="345.361328"/>
-       <use xlink:href="#DejaVuSans-64" x="377.148438"/>
-       <use xlink:href="#DejaVuSans-65" x="440.625"/>
-       <use xlink:href="#DejaVuSans-20" x="502.148438"/>
-       <use xlink:href="#DejaVuSans-61" x="533.935547"/>
-       <use xlink:href="#DejaVuSans-63" x="595.214844"/>
-       <use xlink:href="#DejaVuSans-74" x="650.195312"/>
-       <use xlink:href="#DejaVuSans-69" x="689.404297"/>
-       <use xlink:href="#DejaVuSans-76" x="717.1875"/>
-       <use xlink:href="#DejaVuSans-69" x="776.367188"/>
-       <use xlink:href="#DejaVuSans-64" x="804.150391"/>
-       <use xlink:href="#DejaVuSans-61" x="867.626953"/>
-       <use xlink:href="#DejaVuSans-64" x="928.90625"/>
-       <use xlink:href="#DejaVuSans-20" x="992.382812"/>
-       <use xlink:href="#DejaVuSans-66" x="1024.169922"/>
-       <use xlink:href="#DejaVuSans-ed" x="1059.375"/>
-       <use xlink:href="#DejaVuSans-73" x="1087.158203"/>
-       <use xlink:href="#DejaVuSans-69" x="1139.257812"/>
-       <use xlink:href="#DejaVuSans-63" x="1167.041016"/>
-       <use xlink:href="#DejaVuSans-61" x="1222.021484"/>
-       <use xlink:href="#DejaVuSans-20" x="1283.300781"/>
-       <use xlink:href="#DejaVuSans-28" x="1315.087891"/>
-       <use xlink:href="#DejaVuSans-71" x="1354.101562"/>
-       <use xlink:href="#DejaVuSans-35" x="1417.578125"/>
-       <use xlink:href="#DejaVuSans-30" x="1481.201172"/>
-       <use xlink:href="#DejaVuSans-29" x="1544.824219"/>
+       <text x="1583.837891" y="0" transform="scale(1 -1)" text-anchor="end" style="font: 100px 'DejaVu Sans', sans-serif">2. Caminar o ir en bici a la escuela (q50)</text>
       </g>
      </g>
     </g>
